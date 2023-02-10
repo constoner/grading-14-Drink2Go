@@ -1,0 +1,54 @@
+$font-main: "Montserrat", "Verdana", sans-serif;
+
+$breakpoints: (
+    small: 320px,
+    medium: 768px,
+    large: 1440px,
+);
+
+$indents: (
+    small: 20px,
+    medium: 30px,
+    large: 40px,
+);
+
+$layers: (
+    main: 0,
+    header: 5,
+    hero-image: 1,
+    hero-text: 2,
+    map-image: 0,
+    map-block: 1,
+    map-pin: 2,
+);
+
+$font-size: (
+    small: 12px,
+    medium: 16px,
+    main: 14px,
+    h3-desktop: 24px,
+    h3-tablet: 24px,
+    h3-mobile: 18px,
+    h2-desktop: 42px,
+    h2-tablet: 42px,
+    h2-mobile: 24px,
+    h1-desktop: 56px,
+    h1-tablet: 56px,
+    h1-mobile: 36px,
+
+);
+
+$line-height: (
+    small: 16px,
+    medium: 24px,
+    main: 20px,
+    h3-desktop: 36px,
+    h3-tablet: 36px,
+    h3-mobile: 32px,
+    h2-desktop: 64px,
+    h2-tablet: 64px,
+    h2-mobile: 36px,
+    h1-desktop: 80px,
+    h1-tablet: 80px,
+    h1-mobile: 48px,
+);

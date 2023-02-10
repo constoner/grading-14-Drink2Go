@@ -1,0 +1,29 @@
+@use "./colors" as c;
+@use "./variables" as v;
+
+body {
+    margin: 0;
+    font-family: v.$font-main;
+    font-size: map-get(v.$font-size, main);
+    line-height: map-get(v.$line-height, main);
+    font-weight: 400;
+    color: c.$base-black;
+    background-color: c.$base-white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: c.$base-black;
+    text-decoration: none;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

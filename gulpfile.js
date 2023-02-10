@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
 import dartSass from "sass";
@@ -44,6 +45,7 @@ export function processStyles () {
       autoprefixer(),
       csso()
     ]))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }

@@ -1,7 +1,6 @@
 /* GLOBAL */
-@import "global/variables";
-@import "global/global";
-@import "global/fonts";
+@use "./global/fonts";
+@use "./global/variables";
+@use "./global/global";
 
 /* BLOCKS */
-@import "blocks/header";

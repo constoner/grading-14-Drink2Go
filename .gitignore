@@ -1,4 +1,6 @@
 node_modules
 build
+.git
+.github
 .idea
 .DS_Store
