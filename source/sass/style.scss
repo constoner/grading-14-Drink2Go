@@ -4,3 +4,6 @@
 @use "./global/global";
 
 /* BLOCKS */
+@use "./layout/header";
+@use "./components/menu-button";
+@use "./components/logo";

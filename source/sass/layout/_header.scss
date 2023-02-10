@@ -1,0 +1,15 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 12px map-get(v.$indents, small);
+    background-color: c.$base-white;
+}
+
+.header__menu {
+
+}

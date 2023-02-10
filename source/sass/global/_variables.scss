@@ -2,8 +2,10 @@ $font-main: "Montserrat", "Verdana", sans-serif;
 
 $breakpoints: (
     small: 320px,
-    medium: 768px,
-    large: 1440px,
+    // medium: 768px,
+    medium: 700px,
+    large: 1240px,
+    // large: 1440px,
 );
 
 $indents: (
@@ -26,15 +28,15 @@ $font-size: (
     small: 12px,
     medium: 16px,
     main: 14px,
-    h3-desktop: 24px,
-    h3-tablet: 24px,
-    h3-mobile: 18px,
-    h2-desktop: 42px,
-    h2-tablet: 42px,
-    h2-mobile: 24px,
-    h1-desktop: 56px,
-    h1-tablet: 56px,
-    h1-mobile: 36px,
+    h3-large: 24px,
+    h3-medium: 24px,
+    h3-small: 18px,
+    h2-large: 42px,
+    h2-medium: 42px,
+    h2-small: 24px,
+    h1-large: 56px,
+    h1-medium: 56px,
+    h1-small: 36px,
 
 );
 

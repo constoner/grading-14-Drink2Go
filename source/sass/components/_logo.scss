@@ -1,0 +1,39 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+
+.logo__image {
+    width: 32px;
+    height: 36px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        width: 82px;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        width: 170px;
+    }
+}
+
+
+.logo__text {
+    display: none;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        display: inline;
+        margin-left: map-get(v.$indents, small);
+        width: 180px;
+        font-size: map-get(v.$font-size, small);
+        line-height: map-get(v.$line-height, small);
+    }
+}

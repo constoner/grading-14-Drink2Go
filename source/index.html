@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Drink2Go</title>
-    <meta
-      name="description"
-      content="Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток"
-    >
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="./css/style.min.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-    <!-- <script src="./js/script.js" defer></script> -->
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="description"
+    content="Drink2Go — это интернет-магазин по продаже кофейных напитков. Удобная сортировка по странам произрастания зерна и концентрации молока поможет выбрать идеальный напиток">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="body">
+  <header class="header header--nojs">
+    <a class="header__link logo" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
+      <picture>
+        <source media="(min-width: 1240px)" srcset="./img/logo_large.svg">
+        <source media="(min-width: 700px)" srcset="./img/logo_medium.svg">
+        <img class="logo__image" src="./img/logo_small.svg" width="32" height="36" alt="Логотип Drink2Go.">
+      </picture>
+      <span class="logo__text">Интернет-магазин кофейных напитков</span>
+    </a>
+    <!-- .site-navigation--nojs возвращает в поток меню -->
+    <!-- .site-navigation--opened открывает мобильное меню при клике на кнопку -->
+    <nav class="header__menu site-navigation site-navigation--nojs">
+      <ul class="site-navigation__list" role="menubar">
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./index.html" aria-current="page">Главная</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./catalog.html">Каталог</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./delivery.html">Доставка</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./about.html">О нас</a>
+        </li>
+      </ul>
+      <!-- .menu-button--opened переключает вид бургер кнопки при открытии меню -->
+      <button class="header__button menu-button" type="button">
+        <span class="visually-hidden">Меню.</span>
+        <span class="menu-button__E"></span>
+        <span class="menu-button__X"></span>
+      </button>
+    </nav>
+    <nav class="header__menu user-navigation">
+      <li class="user-navigation__item">
+        <a class="user-navigation__link" href="./login.html">Войти</a>
+      </li>
+      <li class="user-navigation__item">
+        <a class="user-navigation__link" href="./cart.html">Корзина</a>
+      </li>
+    </nav>
+
+  </header>
+  <script src="./js/script.min.js" defer></script>
+</body>
+
 </html>
