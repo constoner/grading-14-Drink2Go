@@ -1,0 +1,9 @@
+@use "./../global/colors" as c;
+@use "./../global/variables" as v;
+
+.page-wrapper {
+    width: 100%;
+    max-width: map-get(v.$breakpoints, maxwidth);
+    margin-left: auto;
+    margin-right: auto;
+  }

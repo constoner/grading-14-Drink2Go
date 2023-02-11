@@ -1,0 +1,29 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.footer {
+    margin-top: auto;
+    background-color: c.$base-white;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    padding: 22px map-get(v.$indents, small);
+    border-bottom: 1px solid c.$base-secondary;
+}
+
+.footer__wrapper {
+    padding: map-get(v.$indents, small);
+    padding-bottom: 0;
+    border-bottom: 1px solid c.$base-secondary;
+}
+
+.footer__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: map-get(v.$font-size, main);
+    line-height: map-get(v.$line-height, main);
+    font-weight: 700;
+    color: c.$base-primary;
+}

@@ -1,0 +1,37 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.credit {
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: map-get(v.$indents, small);
+    padding-bottom: map-get(v.$indents, medium);
+    font-size: map-get(v.$font-size, small);
+    line-height: map-get(v.$line-height, small);
+    color: c.$base-grey;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        padding-bottom: map-get(v.$indents, large);
+    }
+}
+
+.credit__link {
+    color: inherit;
+    transition: color 0.2s ease-out;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        &:hover,
+        &:focus {
+            color: c.$base-primary;
+        }
+    }
+    
+    &:active {
+        color: c.$primary-darker;
+    }
+}
+
+.credit__icon {
+    vertical-align: middle;
+    color: inherit;
+}

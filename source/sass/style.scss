@@ -5,7 +5,14 @@
 
 /* BLOCKS */
 @use "./layout/header";
+@use "./layout/footer";
+@use "./layout/page-wrapper";
 @use "./components/site-navigation";
 @use "./components/user-navigation";
 @use "./components/menu-button";
 @use "./components/logo";
+@use "./components/hero";
+@use "./components/social-list";
+@use "./components/footer-list";
+@use "./components/address";
+@use "./components/credit";

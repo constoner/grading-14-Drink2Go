@@ -23,7 +23,7 @@
     <nav class="header__menu-user user-navigation">
       <ul class="user-navigation__list">
         <li class="user-navigation__item">
-          <a class="user-navigation__link" href="./login.html">
+          <a class="user-navigation__link" href="./login.html" aria-label="Войти." title="Личный кабинет">
             <svg class="user-navigation__icon"
             fill="currentColor"
             width="16"
@@ -32,7 +32,7 @@
             aria-hidden="true"
             focusable="false"
             >
-            <use href="./img/icons/stack.svg#user"/>
+              <use href="./img/icons/stack.svg#user"/>
             </svg>
             <span class="user-navigation__text">
               Войти
@@ -40,7 +40,7 @@
           </a>
         </li>
         <li class="user-navigation__item">
-          <a class="user-navigation__link" href="./cart.html">
+          <a class="user-navigation__link" href="./cart.html" aria-label="Корзина." title="Корзина">
             <svg class="user-navigation__icon"
             fill="currentColor"
             width="16"
@@ -49,7 +49,7 @@
             aria-hidden="true"
             focusable="false"
             >
-            <use href="./img/icons/stack.svg#cart"/>
+              <use href="./img/icons/stack.svg#cart"/>
             </svg>
           <span class="user-navigation__text">
             Корзина
@@ -62,8 +62,7 @@
     <!-- .site-navigation--opened открывает мобильное меню при клике на кнопку -->
     <nav class="header__menu-site site-navigation">
       <!-- .menu-button--opened переключает вид бургер кнопки при открытии меню -->
-      <button class="header__button header__button--nojs menu-button" type="button">
-        <span class="visually-hidden">Меню.</span>
+      <button class="header__button header__button--nojs menu-button" type="button" aria-label="Меню.">
         <span class="menu-button__E"></span>
         <span class="menu-button__X"></span>
       </button>
@@ -83,32 +82,135 @@
       </ul>
     </nav>
   </header>
-  <p style="color: red">random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
-  <p>random text</p>
+  <main class="main page-wrapper">
+    <h1 class="visually-hidden">Интернет-магазин кофейных напитков.</h1>
+
+    <section class="hero">
+      <h2 class="visually-hidden">Новинки!</h2>
+      <div class="hero__slider" id="slider">
+        <p style="color: red">random text</p>
+        <p>random text</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer page-wrapper">
+    <div class="footer__social">
+      <a class="footer__link logo" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
+        <picture>
+          <source media="(min-width: 700px)" srcset="./img/logo_large.svg">
+          <img class="logo__image logo__image--bigger" src="./img/logo_medium.svg" width="82" height="36" alt="Логотип Drink2Go.">
+        </picture>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
+      </a>
+      <ul class="footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" aria-label="Мы Вконтакте.">
+            <svg class="social-list__icon"
+            fill="currentColor"
+            width="20"
+            height="20"
+            role="img"
+            aria-hidden="true"
+            focusable="false"
+            >
+              <use href="./img/icons/stack.svg#vk"/>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" aria-label="Мы на Pinterest.">
+            <svg class="social-list__icon"
+            fill="currentColor"
+            width="20"
+            height="20"
+            role="img"
+            aria-hidden="true"
+            focusable="false"
+            >
+              <use href="./img/icons/stack.svg#pinterest"/>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link" href="#" aria-label="Мы в Одноклассниках.">
+            <svg class="social-list__icon"
+            fill="currentColor"
+            width="20"
+            height="20"
+            role="img"
+            aria-hidden="true"
+            focusable="false"
+            >
+              <use href="./img/icons/stack.svg#ok"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="footer__navigation">
+      <div class="footer__wrapper">
+        <h4 class="footer__title">Интернет-магазин</h4>
+        <ul class="footer__list footer-list">
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./catalog.html">Каталог</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./delivery.html">Доставка</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./payments.html">Способы оплаты</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./about.html">О нас</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper">
+        <h4 class="footer__title">Медиа</h4>
+        <ul class="footer__list footer-list">
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./blog.html">Блог</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./press-releases.html">Информация для СМИ</a>
+          </li>
+          <li class="footer-list__item">
+            <a class="footer-list__link" href="./licenses-detail.html">Правовая информация</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper">
+        <h4 class="footer__title">Контакты</h4>
+        <address class="footer__address address">
+            <p class="adress__text adress__text--address">
+              Санкт-Петербург, набережная реки Карповки, дом 5
+            </p>
+            <a class="adress__text adress__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </address>
+      </div>
+    </nav>
+    <p class="credit">
+      Разработано в 
+      <a
+        class="credit__link"
+        href="https://htmlacademy.ru/intensive/adaptive"
+        target="_blank"
+        rel="norefferer"
+      >
+        <span class="credit__text">HTML Academy</span>
+        <svg class="credit__icon"
+        fill="currentColor"
+        width="12"
+        height="16"
+        role="img"
+        aria-hidden="true"
+        focusable="false"
+        >
+          <use href="./img/icons/stack.svg#credit"/>
+        </svg>
+      </a>
+    </p>
+  </footer>
   <script src="./js/script.min.js" defer></script>
 </body>
 </html>

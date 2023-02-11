@@ -1,0 +1,39 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.adress__text {
+    position: relative;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: map-get(v.$indents,small);
+    padding-left: 19px;
+    font-style: normal;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 13px;
+        height: 16px;
+        color: c.$base-primary;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: ""
+    }
+
+    &--address {
+        &::before {
+            top: 0;
+            background-image: url("/../img/icons/stack.svg#address");
+        }
+    }
+
+    &--phone {
+        &::before {
+            top: 2px;
+            background-image: url("/../img/icons/stack.svg#phone");
+        }
+    }
+}
+
