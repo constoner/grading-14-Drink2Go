@@ -12,6 +12,13 @@
             opacity: 0.8;
         }
     }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        &--bigger {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
 }
 
 
@@ -45,5 +52,14 @@
         width: 180px;
         font-size: map-get(v.$font-size, small);
         line-height: map-get(v.$line-height, small);
+
+        &--bigger {
+            display: block;
+            width: 318px;
+            margin-top: 10px;
+            margin-left: 0;
+            font-size: map-get(v.$font-size, main);
+            line-height: map-get(v.$line-height, main);
+        }
     }
 }

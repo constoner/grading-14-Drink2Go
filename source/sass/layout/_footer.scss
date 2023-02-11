@@ -3,20 +3,99 @@
 
 .footer {
     margin-top: auto;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
     background-color: c.$base-white;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-direction: row;
+    }
 }
 
 .footer__social {
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 22px map-get(v.$indents, small);
-    border-bottom: 1px solid c.$base-secondary;
+    padding: map-get(v.$indents, small);
+
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: c.$base-secondary;
+        content: "";
+    }    
+    
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        padding-bottom: map-get(v.$indents, medium);
+
+        &::after {
+            display: none;
+        }
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.footer__social-list {
+    margin: 0;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-top: 50px;
+    }
+}
+
+.footer__navigation {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        flex-direction: row;
+        padding-top: 0;
+    }
 }
 
 .footer__wrapper {
+    position: relative;
     padding: map-get(v.$indents, small);
+    padding-top: map-get(v.$indents, small);
     padding-bottom: 0;
-    border-bottom: 1px solid c.$base-secondary;
+    
+    &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: c.$base-secondary;
+        content: "";
+    } 
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        width: 223px;
+        margin-left: map-get(v.$indents, medium);
+        padding: 0;
+        
+        &::after {
+            display: none;
+        }
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        padding-top: map-get(v.$indents, small);
+        width: 317px;
+    }
 }
 
 .footer__title {
@@ -26,4 +105,8 @@
     line-height: map-get(v.$line-height, main);
     font-weight: 700;
     color: c.$base-primary;
+}
+
+.footer__address {
+    margin-bottom: map-get(v.$indents,small);
 }

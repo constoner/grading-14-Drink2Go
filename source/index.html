@@ -82,6 +82,7 @@
       </ul>
     </nav>
   </header>
+
   <main class="main page-wrapper">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков.</h1>
 
@@ -93,102 +94,105 @@
       </div>
     </section>
   </main>
+
   <footer class="footer page-wrapper">
-    <div class="footer__social">
-      <a class="footer__link logo" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
-        <picture>
-          <source media="(min-width: 700px)" srcset="./img/logo_large.svg">
-          <img class="logo__image logo__image--bigger" src="./img/logo_medium.svg" width="82" height="36" alt="Логотип Drink2Go.">
-        </picture>
-        <span class="logo__text">Интернет-магазин кофейных напитков</span>
-      </a>
-      <ul class="footer__social-list social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы Вконтакте.">
-            <svg class="social-list__icon"
-            fill="currentColor"
-            width="20"
-            height="20"
-            role="img"
-            aria-hidden="true"
-            focusable="false"
-            >
-              <use href="./img/icons/stack.svg#vk"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы на Pinterest.">
-            <svg class="social-list__icon"
-            fill="currentColor"
-            width="20"
-            height="20"
-            role="img"
-            aria-hidden="true"
-            focusable="false"
-            >
-              <use href="./img/icons/stack.svg#pinterest"/>
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="#" aria-label="Мы в Одноклассниках.">
-            <svg class="social-list__icon"
-            fill="currentColor"
-            width="20"
-            height="20"
-            role="img"
-            aria-hidden="true"
-            focusable="false"
-            >
-              <use href="./img/icons/stack.svg#ok"/>
-            </svg>
-          </a>
-        </li>
-      </ul>
+    <div class="footer__container">
+      <div class="footer__social">
+        <a class="footer__link logo logo--bigger" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
+          <picture>
+            <source media="(min-width: 700px)" srcset="./img/logo_large.svg">
+            <img class="logo__image logo__image--bigger" src="./img/logo_medium.svg" width="82" height="36" alt="Логотип Drink2Go.">
+          </picture>
+          <span class="logo__text logo__text--bigger">Интернет-магазин кофейных напитков</span>
+        </a>
+        <ul class="footer__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Мы Вконтакте.">
+              <svg class="social-list__icon"
+              fill="currentColor"
+              width="20"
+              height="20"
+              role="img"
+              aria-hidden="true"
+              focusable="false"
+              >
+                <use href="./img/icons/stack.svg#vk"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Мы на Pinterest.">
+              <svg class="social-list__icon"
+              fill="currentColor"
+              width="20"
+              height="20"
+              role="img"
+              aria-hidden="true"
+              focusable="false"
+              >
+                <use href="./img/icons/stack.svg#pinterest"/>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#" aria-label="Мы в Одноклассниках.">
+              <svg class="social-list__icon"
+              fill="currentColor"
+              width="20"
+              height="20"
+              role="img"
+              aria-hidden="true"
+              focusable="false"
+              >
+                <use href="./img/icons/stack.svg#ok"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="footer__navigation">
+        <div class="footer__wrapper">
+          <h4 class="footer__title">Интернет-магазин</h4>
+          <ul class="footer__list footer-list">
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./catalog.html">Каталог</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./delivery.html">Доставка</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./payments.html">Способы оплаты</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./about.html">О нас</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__wrapper">
+          <h4 class="footer__title">Медиа</h4>
+          <ul class="footer__list footer-list">
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./blog.html">Блог</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./press-releases.html">Информация для СМИ</a>
+            </li>
+            <li class="footer-list__item">
+              <a class="footer-list__link" href="./licenses-detail.html">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__wrapper">
+          <h4 class="footer__title">Контакты</h4>
+          <address class="footer__address address">
+              <p class="adress__text adress__text--address">
+                Санкт-Петербург, набережная реки Карповки, дом 5
+              </p>
+              <a class="adress__text adress__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+          </address>
+        </div>
+      </nav>
     </div>
-    <nav class="footer__navigation">
-      <div class="footer__wrapper">
-        <h4 class="footer__title">Интернет-магазин</h4>
-        <ul class="footer__list footer-list">
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./catalog.html">Каталог</a>
-          </li>
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./delivery.html">Доставка</a>
-          </li>
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./payments.html">Способы оплаты</a>
-          </li>
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./about.html">О нас</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__wrapper">
-        <h4 class="footer__title">Медиа</h4>
-        <ul class="footer__list footer-list">
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./blog.html">Блог</a>
-          </li>
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./press-releases.html">Информация для СМИ</a>
-          </li>
-          <li class="footer-list__item">
-            <a class="footer-list__link" href="./licenses-detail.html">Правовая информация</a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer__wrapper">
-        <h4 class="footer__title">Контакты</h4>
-        <address class="footer__address address">
-            <p class="adress__text adress__text--address">
-              Санкт-Петербург, набережная реки Карповки, дом 5
-            </p>
-            <a class="adress__text adress__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
-        </address>
-      </div>
-    </nav>
     <p class="credit">
       Разработано в 
       <a

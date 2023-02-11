@@ -16,15 +16,15 @@
     font-weight: 500;
     text-transform: uppercase;
     transition: color 0.2s ease-out;
-
-    &:active {
-        color: c.$primary-darker;
-    }
-
+    
     @media (min-width: map-get(v.$breakpoints, medium)) {
         &:hover,
         &:focus {
             color: c.$primary-lighter;
         }
     }
+    
+        &:active {
+            color: c.$primary-darker;
+        }
 }
