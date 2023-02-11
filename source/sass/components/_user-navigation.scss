@@ -1,0 +1,29 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.user-navigation__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.user-navigation__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+
+    &:active {
+        background-color: c.$base-secondary;
+    }
+}
+
+.user-navigation__text {
+    display: none;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        display: inline;
+    }
+}

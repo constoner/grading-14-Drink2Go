@@ -5,5 +5,7 @@
 
 /* BLOCKS */
 @use "./layout/header";
+@use "./components/site-navigation";
+@use "./components/user-navigation";
 @use "./components/menu-button";
 @use "./components/logo";

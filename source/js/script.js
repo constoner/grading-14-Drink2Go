@@ -1,19 +1,20 @@
 const menuButton = document.querySelector(".header__button");
-const menuContainer = document.querySelector(".site-navigation");
+const menuContainer = document.querySelector(".site-navigation__list");
 const header = document.querySelector(".header--nojs")
 const burgerButton = document.querySelector(".menu-button");
 // const mapContainer = document.querySelector(".contacts__map");
 // const mapFallback = document.querySelector(".contacts__map-fallback");
 
 // скрытие меню по-умолчанию
-menuContainer.classList.remove("site-navigation--nojs");
+menuButton.classList.toggle("header__button--nojs");
+menuContainer.classList.remove("site-navigation__list--nojs");
 header.classList.remove("header--nojs");
 // mapContainer.classList.remove("contacts__map--nojs");
 // mapFallback.classList.remove("contacts__map-fallback--nojs");
 
 // переключатель состояния меню
 function menuToggle() {
-  menuContainer.classList.toggle("site-navigation--opened");
+  menuContainer.classList.toggle("site-navigation__list--opened");
 }
 
 // открытие/закрытие меню по кнопке

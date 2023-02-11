@@ -1,0 +1,67 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.site-navigation__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: c.$base-white;
+    transform-origin: top center;
+    transform: scaleY(0);
+    will-change: transform;
+    transition: all 0.2s ease-out;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        transform: scale(1);
+    }
+
+    &--nojs {
+        position: static;
+        width: 100vw;
+        transform: scaleY(1);
+    }
+
+    &--opened {
+        transform: scaleY(1);
+    }
+}
+
+.site-navigation__item {
+    border-bottom: 1px solid c.$base-secondary;
+    
+    &:first-child {
+        border-top: 1px solid c.$base-secondary;
+    }
+}
+
+.site-navigation__link {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: map-get(v.$font-size, small);
+    line-height: map-get(v.$line-height, small);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:active {
+        background-color: c.$base-secondary;
+
+        @media (min-width: map-get(v.$breakpoints, medium)) {
+            color: c.$base-primary;
+        }
+    }
+    
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        transition: color 0.2s ease-out;
+
+        &:hover,
+        &:focus {
+            color: c.$base-primary;
+        }
+    }
+}
