@@ -1,6 +1,10 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
+.site-navigation {
+
+}
+
 .site-navigation__list {
     position: absolute;
     left: 0;
@@ -16,6 +20,9 @@
     transition: all 0.2s ease-out;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
         transform: scale(1);
     }
 
@@ -31,15 +38,19 @@
 }
 
 .site-navigation__item {
-    border-bottom: 1px solid c.$base-secondary;
-    
-    &:first-child {
-        border-top: 1px solid c.$base-secondary;
+    @media (max-width: map-get(v.$breakpoints, medium)) {
+        border-bottom: 1px solid c.$base-secondary;
+        
+        &:first-child {
+            border-top: 1px solid c.$base-secondary;
+        }
     }
 }
 
 .site-navigation__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 20px;
     font-size: map-get(v.$font-size, small);
@@ -57,11 +68,23 @@
     }
     
     @media (min-width: map-get(v.$breakpoints, medium)) {
+        position: relative;
+        height: 80px;
         transition: color 0.2s ease-out;
 
         &:hover,
         &:focus {
             color: c.$base-primary;
+        }
+
+        &[aria-current="page"]::after {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: c.$base-primary;
+            content: "";
         }
     }
 }

@@ -7,7 +7,13 @@
     display: flex;
     align-items: center;
     min-height: 60px;
+    padding-left: map-get(v.$indents, small);
     background-color: c.$base-white;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        min-height: 80px;
+        padding: 0 map-get(v.$indents, small);
+    }
     
     &--nojs {
         position: static;
@@ -16,7 +22,15 @@
 }
 
 .header__link {
+    flex-shrink: 0;
     margin-right: auto;
+}
+
+.header__menu-user,
+.header__menu-site {
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-left: 60px;
+    }
 }
 
 .header__button {

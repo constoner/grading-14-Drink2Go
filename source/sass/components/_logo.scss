@@ -4,7 +4,6 @@
 .logo {
     display: flex;
     align-items: center;
-    padding-left: 20px;
     transition: all 0.2s;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
