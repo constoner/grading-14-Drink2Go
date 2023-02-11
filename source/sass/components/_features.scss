@@ -1,0 +1,144 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.features {
+    padding: 50px map-get(v.$indents, small);
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        padding: 60px map-get(v.$indents, medium) 100px;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        padding: 100px map-get(v.$indents, large) 130px;
+    }
+}
+
+.features__tag {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: map-get(v.$font-size, small);
+    font-weight: 700;
+    line-height: map-get(v.$line-height, small);
+    color: c.$base-primary;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.features__title{
+    width: 100%;
+    margin: 0;
+    margin-bottom: 36px;
+    font-size: map-get(v.$font-size, h2-small);
+    line-height: map-get(v.$line-height, h2-small);
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-bottom: 60px;
+        font-size: map-get(v.$font-size, h2-medium);
+        line-height: map-get(v.$line-height, h2-medium);
+    }
+}
+
+.features__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: map-get(v.$indents, medium);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px map-get(v.$indents, medium);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 50px map-get(v.$indents, medium);
+    }
+}
+
+.features__item {
+    position: relative;
+    padding-top: 66px;
+    text-align: center;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        padding-top: 0;
+        padding-left: 72px;
+        text-align: left;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        padding-top: 76px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 26px);
+        display: block;
+        width: 52px;
+        height: 56px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: "";
+
+        @media (min-width: map-get(v.$breakpoints, medium)) {
+            left: 0;
+        }
+
+        @media (min-width: map-get(v.$breakpoints, medium)) {
+            left: calc(50% - 26px);
+        }
+    }
+
+    &--quick::before {
+        background-image: url("/../img/icons/stack.svg#features_quick");
+    }
+
+    &--easy::before {
+        background-image: url("/../img/icons/stack.svg#features_easy");
+    }
+
+    &--power::before {
+        background-image: url("/../img/icons/stack.svg#features_power");
+    }
+
+    &--eco::before {
+        background-image: url("/../img/icons/stack.svg#features_eco");
+    }
+}
+
+.features__name {
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: map-get(v.$font-size, h3-small);
+    line-height: map-get(v.$line-height, h3-small);
+    font-weight: 700;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-bottom: 10px;
+        font-size: map-get(v.$font-size, h3-medium);
+        line-height: map-get(v.$line-height, h3-medium);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        font-size: map-get(v.$font-size, h3-large);
+        line-height: map-get(v.$line-height, h3-large);
+    }
+}
+
+.features__text {
+    margin: 0;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        font-size: map-get(v.$font-size, medium);
+        line-height: map-get(v.$line-height, medium);
+    }
+}
