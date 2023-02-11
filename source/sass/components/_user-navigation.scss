@@ -2,8 +2,14 @@
 @use "./../global/colors" as c;
 
 .user-navigation {
+    margin-left: auto;
+
     @media (min-width: map-get(v.$breakpoints, medium)) {
         order: 1;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-shrink: 0;
     }
 }
 
@@ -35,6 +41,17 @@
             color: c.$base-primary
         }
     }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-shrink: 0;
+        width: auto;
+        margin-left: map-get(v.$indents, small);
+        padding: 0 map-get(v.$indents, small);
+    }
+}
+
+.user-navigation__icon {
+    flex-shrink: 0;
 }
 
 .user-navigation__text {
@@ -42,5 +59,10 @@
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         display: inline;
+        margin-left: 8px;
+        font-size: map-get(v.$font-size, small);
+        line-height: map-get(v.$line-height, small);
+        font-weight: 500;
+        text-transform: uppercase;
     }
 }

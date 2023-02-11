@@ -1,10 +1,6 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
-.site-navigation {
-
-}
-
 .site-navigation__list {
     position: absolute;
     left: 0;
@@ -74,6 +70,10 @@
 
         &:hover,
         &:focus {
+            color: c.$base-primary;
+        }
+
+        &[aria-current="page"] {
             color: c.$base-primary;
         }
 

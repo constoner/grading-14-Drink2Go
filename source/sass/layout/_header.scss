@@ -14,6 +14,11 @@
         min-height: 80px;
         padding: 0 map-get(v.$indents, small);
     }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        position: static;
+        padding: 0 map-get(v.$indents, large);
+    }
     
     &--nojs {
         position: static;
@@ -24,13 +29,6 @@
 .header__link {
     flex-shrink: 0;
     margin-right: auto;
-}
-
-.header__menu-user,
-.header__menu-site {
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-left: 60px;
-    }
 }
 
 .header__button {
