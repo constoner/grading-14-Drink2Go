@@ -3,6 +3,19 @@
 
 .map {
     position: relative;
+}
+
+.map__image {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+.map__container {
+    position: relative;
+    left: 0;
+    top: -100%;
     z-index: 0;
     height: 420px;
 

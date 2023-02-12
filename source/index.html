@@ -120,7 +120,26 @@
       </ul>
     </section>
 
-    <div class="map" id="map"></div>
+    <section class="map">      
+      <h2 class="visually-hidden">Мы на карте.</h2>
+      <!-- fallback map -->
+      <picture>
+        <source media="(min-width: 1240px)" srcset="../img/fallback-map-large.png">
+        <source media="(min-width: 700px)" srcset="./img/fallback-map-medium.png">
+        <img
+          class="map__image"
+          src="./img/fallback-map-small.png"
+          sizes="(min-width: 320px) 320px,
+          (min-width: 700px) 768px,
+          (min-width: 1240px) 1440px"
+          alt="Карта города."
+          loading="lazy"
+        >
+      </picture>
+      <!-- leaflet map -->
+      <div class="map__container" id="map"></div>
+    </section>
+
   </main>
 
   <footer class="footer page-wrapper">
