@@ -26,3 +26,30 @@ function buttonToggle() {
 }
 
 burgerButton.addEventListener("click", buttonToggle);
+
+// интерактивная карта
+const shopPlace = [59.96839, 30.31758]; // подобрал числа по гуглкартам и макету
+
+const markerIcon = L.icon({
+  iconUrl: './../img/map-pin.svg',
+  iconSize: [38, 50],
+  iconAnchor: [19, 50],
+});
+
+const markerOptions = {
+  icon: markerIcon,
+};
+
+const mapOptions = {
+  attributionControl: false,
+  zoomControl: false,
+  boxZoom: false,
+  scrollWheelZoom: 'center',
+  center: shopPlace,
+  zoom: 18,
+};
+
+const map = L.map('map', mapOptions);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+L.marker(shopPlace, markerOptions).addTo(map);
