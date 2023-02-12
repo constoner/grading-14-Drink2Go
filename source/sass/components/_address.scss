@@ -24,14 +24,14 @@
     &--address {
         &::before {
             top: 0;
-            background-image: url("/../img/icons/stack.svg#address");
+            background-image: url("./../../img/icons/stack.svg#address");
         }
     }
 
     &--phone {
         &::before {
             top: 2px;
-            background-image: url("/../img/icons/stack.svg#phone");
+            background-image: url("./../../img/icons/stack.svg#phone");
         }
     }
 }

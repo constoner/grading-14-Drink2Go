@@ -1,0 +1,13 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.catalog {
+    padding: 50px map-get(v.$indents, small) 44px;
+    background-color: c.$lightest-grey;
+}
+
+.catalog__title {
+    margin: 0;
+    margin-bottom: 20px;
+}
+

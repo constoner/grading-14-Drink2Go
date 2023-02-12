@@ -98,8 +98,8 @@
     </section>
 
     <section class="features page-wrapper">
-      <p class="features__tag">Преимущества</p>
-      <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
+      <p class="features__tag tag">Преимущества</p>
+      <h2 class="features__title title">Главные причины выбрать Drink2Go</h2>
       <ul class="features__list">
         <li class="features__item features__item--quick">
           <h3 class="features__name">Скорость</h3>
@@ -120,11 +120,88 @@
       </ul>
     </section>
 
+    <section class="catalog">
+      <p class="catalog__tag tag">Каталог</p>
+      <h2 class="catalog__title title">Каталог кофейных напитков</h2>
+      <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get">
+        
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Наличие молока</legend>
+          <label class="form__label">
+            <input class="visually-hidden custom-radio__input" type="radio" name="milk" value="default" checked>
+            <span class="custom-radio__button"></span>
+            <span class="custom-radio__label" >Неважно</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="animal">
+            <span class="custom-radio__button"></span>
+            <span class="custom-radio__label" >Только животное</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="vegan">
+            <span class="custom-radio__button"></span>
+            <span class="custom-radio__label" >Только растительное</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="no-milk" disabled>
+            <span class="custom-radio__button"></span>
+            <span class="custom-radio__label" >Без молока</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Страна произрастания</legend>
+          <label class="form__label">
+            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin" value="brazil" checked>
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label" >Бразилия</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="ethiopia">
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label" >Эфиопия</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="colombia">
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label" >Колумбия</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="costa-rica">
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label" >Коста-Рика</span>
+          </label>
+          <label class="form__label">
+            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="peru" disabled>
+            <span class="custom-checkbox__button"></span>
+            <span class="custom-checkbox__label" >Перу</span>
+          </label>
+        </fieldset>
+        <div class="form__button-wrapper">
+          <button class="form__button button button--main" type="submit">Применить фильтр</button> 
+          <button class="form__button button button--add" type="reset">Сбросить фильтр</button> 
+        </div>
+      </form>
+
+      <div class="catalog__wrapper">
+        <div class="catalog__select select">
+          <label class="select__label" for="catalog-sort">Сортировка:</label>
+          <select class="select__input" name="catalog-sort" id="catalog-sort">
+            <option value="default" selected>по умолчанию</option>
+            <option value="expoensive">сначала дорогие</option>
+            <option value="cheap">сначала дешёвые</option>
+            <option value="rank">высокий рейтинг</option>
+          </select>
+        </div>
+        <ul class="catalog__list"></ul>
+      </div>
+    </section>
+
     <section class="map">      
       <h2 class="visually-hidden">Мы на карте.</h2>
       <!-- fallback map -->
       <picture>
-        <source media="(min-width: 1240px)" srcset="../img/fallback-map-large.png">
+        <source media="(min-width: 1240px)" srcset="./img/fallback-map-large.png">
         <source media="(min-width: 700px)" srcset="./img/fallback-map-medium.png">
         <img
           class="map__image"
@@ -271,7 +348,7 @@
         aria-hidden="true"
         focusable="false"
         >
-          <use href="./img/icons/stack.svg#credit"/>
+          <use href="./img/icons/stack.svg#socials_credit"/>
         </svg>
       </a>
     </p>

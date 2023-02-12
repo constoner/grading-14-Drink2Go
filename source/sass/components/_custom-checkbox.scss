@@ -1,0 +1,75 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.custom-checkbox__button {
+    position: relative;
+    display: block;
+    width: 42px;
+    height: 24px;
+    background-color: c.$base-grey;
+    border: 2px solid c.$base-grey;
+    border-radius: 12px;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: c.$base-white;
+        border-radius: 50%;
+        transform: translate(-19px, -50%);
+        transform-origin: 0 0;
+        transition: all 0.1s ease-out;
+        content: "";
+    }
+}
+
+// стили для ховера и фокуса
+.custom-checkbox__input:hover + .custom-checkbox__button,
+.custom-checkbox__input:focus-visible + .custom-checkbox__button {
+    background-color: c.$primary-opacity;
+    border-color: c.$primary-lighter;
+}
+
+// стили для выбранной кнопки
+.custom-checkbox__input:checked + .custom-checkbox__button {
+    border-color: c.$base-primary;
+    background-color: c.$base-primary;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__button::after {
+    transform: translate(-1px, -50%);
+    transform-origin: 0, 0;
+    transition-delay: 0.1s;
+}
+
+.custom-checkbox__label {
+    padding-left: 10px;
+    font-size: map-get(v.$font-size, medium);
+    line-height: map-get(v.$line-height, medium);
+    cursor: pointer;
+}
+
+// стили для отключенной кнопки
+.custom-checkbox__input:disabled + .custom-checkbox__button {
+    background-color: c.$light-grey;
+    border: 2px solid c.$light-grey;
+    cursor: default;
+}
+
+.custom-checkbox__input:disabled + .custom-checkbox__button::after {
+    background-color: c.$lightest-grey;    
+}
+
+.custom-checkbox__input:disabled:checked + .custom-checkbox__button::after {
+    background-color: c.$base-grey;    
+}
+
+.custom-checkbox__input:disabled + .custom-checkbox__button + .custom-checkbox__label {
+    color: c.$base-grey;
+    cursor: default;
+}

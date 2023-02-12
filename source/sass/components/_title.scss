@@ -1,0 +1,30 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.title {
+    width: 100%;
+    font-size: map-get(v.$font-size, h2-small);
+    line-height: map-get(v.$line-height, h2-small);
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        font-size: map-get(v.$font-size, h2-medium);
+        line-height: map-get(v.$line-height, h2-medium);
+    }
+}
+
+.title--big {
+    font-size: map-get(v.$font-size, h1-small);
+    line-height: map-get(v.$line-height, h1-small);
+    
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        font-size: map-get(v.$font-size, h1-medium);
+        line-height: map-get(v.$line-height, h1-medium);
+    }
+    
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        font-size: map-get(v.$font-size, h1-large);
+        line-height: map-get(v.$line-height, h1-large);
+    }
+}

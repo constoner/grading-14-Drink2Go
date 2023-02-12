@@ -10,8 +10,13 @@
     flex-direction: column;
     background-color: c.$base-white;
 
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        padding-top: 20px;
+    }
+
     @media (min-width: map-get(v.$breakpoints, large)) {
         flex-direction: row;
+        padding-top: 20px;
     }
 }
 

@@ -20,16 +20,19 @@
     width: 40px;
     height: 40px;
     color: c.$base-grey;
-    transition: color 0.2s ease-out;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
     
     @media (min-width: map-get(v.$breakpoints, medium)) {
         &:hover,
         &:focus {
             color: c.$base-primary;
+            background-color: c.$base-secondary;
         }
     }
     
     &:active {
-        color: c.$primary-darker;
+        color: c.$base-primary;
+        background-color: c.$primary-opacity;
     }
 }
