@@ -4,11 +4,13 @@
 .header {
     position: sticky;
     top: 0;
+    z-index: map-get(v.$layers, header);
     display: flex;
     align-items: center;
     min-height: 60px;
     padding-left: map-get(v.$indents, small);
     background-color: c.$base-white;
+    border-bottom: 1px solid c.$base-secondary;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         min-height: 80px;
@@ -18,6 +20,7 @@
     @media (min-width: map-get(v.$breakpoints, large)) {
         position: static;
         padding: 0 map-get(v.$indents, large);
+        border-bottom: none;
     }
     
     &--nojs {

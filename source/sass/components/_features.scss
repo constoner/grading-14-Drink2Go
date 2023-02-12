@@ -2,14 +2,14 @@
 @use "./../global/colors" as c;
 
 .features {
-    padding: 50px map-get(v.$indents, small);
+    padding: 50px map-get(v.$indents, small) 60PX;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         padding: 60px map-get(v.$indents, medium) 100px;
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        padding: 100px map-get(v.$indents, large) 130px;
+        padding: 100px map-get(v.$indents, large) 120px;
     }
 }
 
@@ -38,6 +38,10 @@
         margin-bottom: 60px;
         font-size: map-get(v.$font-size, h2-medium);
         line-height: map-get(v.$line-height, h2-medium);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-bottom: 80px;
     }
 }
 
@@ -71,7 +75,7 @@
         text-align: left;
     }
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
+    @media (min-width: map-get(v.$breakpoints, large)) {
         padding-top: 76px;
         padding-left: 0;
         text-align: center;
@@ -93,7 +97,7 @@
             left: 0;
         }
 
-        @media (min-width: map-get(v.$breakpoints, medium)) {
+        @media (min-width: map-get(v.$breakpoints, large)) {
             left: calc(50% - 26px);
         }
     }
