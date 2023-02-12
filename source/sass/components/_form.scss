@@ -1,6 +1,10 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
+.form__fieldset-wrapper {
+    padding-bottom: 13px;
+}
+
 .form__fieldset {
     margin: 0;
     padding: 0;

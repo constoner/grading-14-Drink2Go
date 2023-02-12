@@ -31,7 +31,7 @@ burgerButton.addEventListener("click", buttonToggle);
 const shopPlace = [59.96839, 30.31758]; // подобрал числа по гуглкартам и макету
 
 const markerIcon = L.icon({
-  iconUrl: './../img/map-pin.svg',
+  iconUrl: './img/map-pin.svg',
   iconSize: [38, 50],
   iconAnchor: [19, 50],
 });

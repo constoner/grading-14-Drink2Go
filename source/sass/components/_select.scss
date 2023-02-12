@@ -29,6 +29,12 @@
     background-size: 10px 6px;
     border: none;
     border-radius: 4px;
+    transition: all 0.2s ease-out;
     appearance: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: c.$base-secondary;
+    }
 }
