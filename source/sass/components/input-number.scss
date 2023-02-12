@@ -1,0 +1,49 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.input-number {
+    width: 118px;
+    padding: 7px 10px;
+    font-family: inherit;
+    font-size: map-get(v.$font-size, medium);
+    line-height: 20px;
+    font-weight: 500;
+    color: c.$base-black;
+    text-align: center;
+    background-color: c.$base-white;
+    border: 2px solid c.$primary-lighter;
+    border-radius: 4px;
+    appearance: textfield;
+    transition: all 0.2s ease-out;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    &::placeholder {
+        font-family: inherit;
+        font-size: map-get(v.$font-size, medium);
+        line-height: map-get(v.$line-height, medium);
+        font-weight: 500;
+        color: c.$base-grey;
+        text-align: center;
+    }
+
+    &:hover {
+        border: 2px solid c.$primary-darker;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        border: 2px solid c.$primary-darker;
+    }
+
+    &:disabled {
+        background-color: transparent;
+        border: 2px solid c.$light-grey;
+        cursor: default;
+    }
+}

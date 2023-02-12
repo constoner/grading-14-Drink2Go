@@ -27,6 +27,23 @@ function buttonToggle() {
 
 burgerButton.addEventListener("click", buttonToggle);
 
+
+// рейндж-слайдер
+
+const slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+    start: [0, 900],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 1000
+    }
+});
+
+
+
+
 // интерактивная карта
 const shopPlace = [59.96839, 30.31758]; // подобрал числа по гуглкартам и макету
 

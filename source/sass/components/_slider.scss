@@ -1,0 +1,105 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+#slider {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+#slider .noUi-origin {
+    position: relative;
+    width: calc(100% - 24px);
+}
+
+#slider .noUi-base {
+    width: 100%;
+    height: 4px;
+    background-color: c.$light-grey;
+}
+
+#slider .noUi-connect {
+    height: 4px;
+    background-color: c.$primary-lighter;
+}
+
+#slider .noUi-handle {
+    position: absolute;
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    background-color: c.$base-white;
+    border: 2px solid c.$primary-lighter;
+    border-radius: 50%;
+    box-shadow: none;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+
+    &::after {
+        display: none;
+    }
+
+    &::before {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border-radius: 50%;
+        transition: all 0.2s ease-out;
+        content: "";
+    }
+
+    &:hover::before,
+    &:focus::before {
+        background-color: c.$primary-opacity;
+    }
+    
+    &:active {
+        border-color: c.$base-primary;
+        outline: none;
+    }
+
+    &:active::before {
+        background-color: c.$base-primary;
+    }
+}
+
+#slider .noUi-handle-lower {
+    left: calc(100% + 12px);
+    transform: translate(-50%, -50%);
+}
+
+#slider .noUi-handle-upper {
+    left: calc(100% + 12px);
+    transform: translate(-50%, -50%);
+}
+
+// стили для отключенного слайдера
+#slider[disabled] {
+    cursor: default;
+
+}
+
+#slider[disabled] .noUi-connect {
+    background-color: c.$light-grey;
+}
+
+#slider[disabled] .noUi-handle {
+    background-color: c.$lightest-grey;
+    border-color: c.$light-grey;
+    cursor: default;
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+        display: none;
+    }
+}

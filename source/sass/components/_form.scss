@@ -1,6 +1,20 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
+.form__slider {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form__divider {
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+    margin: 0 14px;
+    background-color: c.$base-grey;
+    vertical-align: middle;
+}
+
 .form__fieldset-wrapper {
     padding-bottom: 13px;
 }
@@ -8,6 +22,7 @@
 .form__fieldset {
     margin: 0;
     padding: 0;
+    padding-bottom: 23px;
     border: none;
 }
 
@@ -23,7 +38,11 @@
 .form__label {
     display: flex;
     align-items: center;
-    margin-bottom: 23px;
+    width: fit-content;
+    
+    &:not(:last-child) {
+        margin-bottom: 23px;
+    }
 }
 
 
