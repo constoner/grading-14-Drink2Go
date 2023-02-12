@@ -11,6 +11,7 @@
   <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
@@ -91,7 +92,7 @@
 
     <section class="hero">
       <h2 class="visually-hidden">Новинки!</h2>
-      <div class="hero__slider" id="slider">
+      <div class="hero__slider" id="swiper">
         <p style="color: red">random text</p>
         <p>random text</p>
       </div>
@@ -124,59 +125,72 @@
       <p class="catalog__tag tag">Каталог</p>
       <h2 class="catalog__title title">Каталог кофейных напитков</h2>
       <form class="catalog__form form" action="https://echo.htmlacademy.ru/" method="get">
-        
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Наличие молока</legend>
-          <label class="form__label">
-            <input class="visually-hidden custom-radio__input" type="radio" name="milk" value="default" checked>
-            <span class="custom-radio__button"></span>
-            <span class="custom-radio__label" >Неважно</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="animal">
-            <span class="custom-radio__button"></span>
-            <span class="custom-radio__label" >Только животное</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="vegan">
-            <span class="custom-radio__button"></span>
-            <span class="custom-radio__label" >Только растительное</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="no-milk" disabled>
-            <span class="custom-radio__button"></span>
-            <span class="custom-radio__label" >Без молока</span>
-          </label>
-        </fieldset>
 
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Страна произрастания</legend>
-          <label class="form__label">
-            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin" value="brazil" checked>
-            <span class="custom-checkbox__button"></span>
-            <span class="custom-checkbox__label" >Бразилия</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="ethiopia">
-            <span class="custom-checkbox__button"></span>
-            <span class="custom-checkbox__label" >Эфиопия</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="colombia">
-            <span class="custom-checkbox__button"></span>
-            <span class="custom-checkbox__label" >Колумбия</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="costa-rica">
-            <span class="custom-checkbox__button"></span>
-            <span class="custom-checkbox__label" >Коста-Рика</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="peru" disabled>
-            <span class="custom-checkbox__button"></span>
-            <span class="custom-checkbox__label" >Перу</span>
-          </label>
-        </fieldset>
+        <div class="form__fieldset-wrapper">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Цена</legend>
+            <div class="form__slider slider" id="slider"></div>
+            <div class="form__input-container">
+              <input class="form__input input-number" type="number" min="0" max="999" placeholder="0">
+              <span class="form__divider"></span>
+              <input class="form__input input-number" type="number" min="1" max="1000" placeholder="1000" value="900">
+            </div>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Наличие молока</legend>
+            <label class="form__label">
+              <input class="visually-hidden custom-radio__input" type="radio" name="milk" value="default" checked>
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label" >Неважно</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="animal">
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label" >Только животное</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="vegan">
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label" >Только растительное</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="no-milk" disabled>
+              <span class="custom-radio__button"></span>
+              <span class="custom-radio__label" >Без молока</span>
+            </label>
+          </fieldset>
+  
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Страна произрастания</legend>
+            <label class="form__label">
+              <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin" value="brazil" checked>
+              <span class="custom-checkbox__button"></span>
+              <span class="custom-checkbox__label" >Бразилия</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="ethiopia">
+              <span class="custom-checkbox__button"></span>
+              <span class="custom-checkbox__label" >Эфиопия</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="colombia">
+              <span class="custom-checkbox__button"></span>
+              <span class="custom-checkbox__label" >Колумбия</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="costa-rica">
+              <span class="custom-checkbox__button"></span>
+              <span class="custom-checkbox__label" >Коста-Рика</span>
+            </label>
+            <label class="form__label">
+              <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="peru" disabled>
+              <span class="custom-checkbox__button"></span>
+              <span class="custom-checkbox__label" >Перу</span>
+            </label>
+          </fieldset>
+        </div>
+
         <div class="form__button-wrapper">
           <button class="form__button button button--main" type="submit">Применить фильтр</button> 
           <button class="form__button button button--add" type="reset">Сбросить фильтр</button> 
@@ -193,6 +207,7 @@
             <option value="rank">высокий рейтинг</option>
           </select>
         </div>
+          
         <ul class="catalog__list"></ul>
       </div>
     </section>
@@ -215,10 +230,10 @@
       </picture>
       <!-- leaflet map -->
       <div class="map__container" id="map"></div>
-    </section>
+    </section>  
 
   </main>
-
+  
   <footer class="footer page-wrapper">
     <div class="footer__container">
       <div class="footer__social">
@@ -239,13 +254,13 @@
               aria-label="Мы Вконтакте."
             >
               <svg class="social-list__icon"
-              fill="currentColor"
-              width="20"
-              height="20"
-              aria-hidden="true"
-              focusable="false"
+                fill="currentColor"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                focusable="false"
               >
-                <use href="./img/icons/stack.svg#socials_vk"/>
+              <use href="./img/icons/stack.svg#socials_vk"/>
               </svg>
             </a>
           </li>
@@ -258,13 +273,13 @@
               aria-label="Мы на Pinterest."
             >
               <svg class="social-list__icon"
-              fill="currentColor"
-              width="20"
-              height="20"
-              aria-hidden="true"
-              focusable="false"
+                fill="currentColor"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                focusable="false"
               >
-                <use href="./img/icons/stack.svg#socials_pinterest"/>
+              <use href="./img/icons/stack.svg#socials_pinterest"/>
               </svg>
             </a>
           </li>
@@ -277,13 +292,13 @@
               aria-label="Мы в Одноклассниках."
             >
               <svg class="social-list__icon"
-              fill="currentColor"
-              width="20"
-              height="20"
-              aria-hidden="true"
-              focusable="false"
+                fill="currentColor"
+                width="20"
+                height="20"
+                aria-hidden="true"
+                focusable="false"
               >
-                <use href="./img/icons/stack.svg#socials_ok"/>
+              <use href="./img/icons/stack.svg#socials_ok"/>
               </svg>
             </a>
           </li>
@@ -340,19 +355,20 @@
         target="_blank"
         rel="norefferer"
       >
-        <span class="credit__text">HTML Academy</span>
-        <svg class="credit__icon"
+      <span class="credit__text">HTML Academy</span>
+      <svg class="credit__icon"
         fill="currentColor"
         width="12"
         height="16"
         aria-hidden="true"
         focusable="false"
-        >
-          <use href="./img/icons/stack.svg#socials_credit"/>
-        </svg>
+      >
+        <use href="./img/icons/stack.svg#socials_credit"/>
+      </svg>
       </a>
     </p>
   </footer>
+  <script src="./vendor/nouislider/nouislider.js" type="text/javascript"></script>
   <script src="./vendor/leaflet/leaflet.js" type="text/javascript"></script>
   <script src="./js/script.min.js" type="module"></script>
 </body>
