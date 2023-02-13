@@ -30,19 +30,43 @@ burgerButton.addEventListener("click", buttonToggle);
 
 // рейндж-слайдер
 
-const slider = document.getElementById('slider');
+const slider = document.querySelector('.slider');
+const inputMin = document.querySelector('.form__input--min');
+const inputMax = document.querySelector('.form__input--max');
+const inputContainer = document.querySelector('.form__input-container');
+const resetButton = document.querySelector('button[type="reset"].form__button');
+
+const MIN = parseInt(inputMin.min, 10);
+const MAX = parseInt(inputMax.max, 10);
 
 noUiSlider.create(slider, {
-    start: [0, 900],
+    start: [inputMin.value, inputMax.value],
     connect: true,
+    step: 1,
     range: {
-        'min': 0,
-        'max': 1000
-    }
+        'min': MIN,
+        'max': MAX
+    },
 });
 
+const onSliderChange = () => {
+  inputMin.value = Math.round(slider.noUiSlider.get(true)[0]);
+  inputMax.value = Math.round(slider.noUiSlider.get(true)[1]);
+};
 
+const onInputChange = () => {
+  const inputValue = [inputMin.value, inputMax.value];
 
+  if (inputMax.value === '') {
+    inputValue[1] = MAX;
+  }
+
+  slider.noUiSlider.set(inputValue);
+};
+
+slider.noUiSlider.on('slide', () => onSliderChange());
+inputContainer.addEventListener('input', () => onInputChange());
+resetButton.addEventListener('click', () => slider.noUiSlider.reset());
 
 // интерактивная карта
 const shopPlace = [59.96839, 30.31758]; // подобрал числа по гуглкартам и макету
