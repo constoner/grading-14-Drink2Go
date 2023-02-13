@@ -6,8 +6,33 @@
     background-color: c.$lightest-grey;
 }
 
+.catalog__form {
+    margin-bottom: 40px;
+}
+
 .catalog__title {
     margin: 0;
     margin-bottom: 20px;
+}
+
+.catalog__select {
+    margin-bottom: 16px;
+}
+
+.catalog__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: map-get(v.$indents, small);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 

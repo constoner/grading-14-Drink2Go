@@ -6,13 +6,24 @@
     margin-bottom: 10px;
 }
 
+.form__input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form__divider {
+    flex-grow: 1;
     display: inline-block;
     width: 8px;
     height: 2px;
     margin: 0 14px;
     background-color: c.$base-grey;
     vertical-align: middle;
+}
+
+.form__input {
+    flex-grow: 1;
 }
 
 .form__fieldset-wrapper {

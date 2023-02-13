@@ -75,7 +75,7 @@
           <a class="site-navigation__link" href="./index.html" aria-current="page">Главная</a>
         </li>
         <li class="site-navigation__item">
-          <a class="site-navigation__link" href="./catalog.html">Каталог</a>
+          <a class="site-navigation__link" href="#catalog">Каталог</a>
         </li>
         <li class="site-navigation__item">
           <a class="site-navigation__link" href="./delivery.html">Доставка</a>
@@ -198,17 +198,97 @@
       </form>
 
       <div class="catalog__wrapper">
+        <a name="catalog"></a>
         <div class="catalog__select select">
           <label class="select__label" for="catalog-sort">Сортировка:</label>
           <select class="select__input" name="catalog-sort" id="catalog-sort">
-            <option value="default" selected>по умолчанию</option>
-            <option value="expoensive">сначала дорогие</option>
-            <option value="cheap">сначала дешёвые</option>
-            <option value="rank">высокий рейтинг</option>
+            <option value="default" selected>по умолчанию&nbsp; </option>
+            <option value="expoensive">сначала дорогие&nbsp; </option>
+            <option value="cheap">сначала дешёвые&nbsp; </option>
+            <option value="rank">высокий рейтинг&nbsp; </option>
           </select>
         </div>
           
-        <ul class="catalog__list"></ul>
+        <ul class="catalog__list">
+          <li class="catalog__item product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="./img/products/product-1.png" srcset="./img/products/product-1@2x.png 2x" width="130" height="188" alt="Изобржение товара 1." loading="lazy">
+            </a>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
+              <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="product-card__container">
+                <span class="product-card__price">225₽</span>
+                <button class="product-card__button button button--main button--icon" type="button">В корзину</button>
+              </div>
+          </li>
+          <li class="catalog__item product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="./img/products/product-2.png" srcset="./img/products/product-2@2x.png 2x" width="130" height="188" alt="Изобржение товара 2." loading="lazy">
+            </a>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
+              <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="product-card__container">
+                <span class="product-card__price">225₽</span>
+                <button class="product-card__button button button--main button--icon" type="button">В корзину</button>
+              </div>
+          </li>
+          <li class="catalog__item product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="./img/products/product-3.png" srcset="./img/products/product-3@2x.png 2x" width="130" height="188" alt="Изобржение товара 3." loading="lazy">
+            </a>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
+              <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="product-card__container">
+                <span class="product-card__price">225₽</span>
+                <button class="product-card__button button button--main button--icon" type="button">В корзину</button>
+              </div>
+          </li>
+          <li class="catalog__item product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="./img/products/product-4.png" srcset="./img/products/product-4@2x.png 2x" width="130" height="188" alt="Изобржение товара 4." loading="lazy">
+            </a>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
+              <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="product-card__container">
+                <span class="product-card__price">225₽</span>
+                <button class="product-card__button button button--main button--icon" type="button">В корзину</button>
+              </div>
+          </li>
+          <li class="catalog__item product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="./img/products/product-5.png" srcset="./img/products/product-5@2x.png 2x" width="130" height="188" alt="Изобржение товара 5." loading="lazy">
+            </a>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
+              <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="product-card__container">
+                <span class="product-card__price">225₽</span>
+                <button class="product-card__button button button--main button--icon" type="button">В корзину</button>
+              </div>
+          </li>
+          <li class="catalog__item product-card">
+            <a class="product-card__link" href="#">
+              <img class="product-card__image" src="./img/products/product-6.png" srcset="./img/products/product-6@2x.png 2x" width="130" height="188" alt="Изобржение товара 6." loading="lazy">
+            </a>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+            </a>
+              <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="product-card__container">
+                <span class="product-card__price">225₽</span>
+                <button class="product-card__button button button--main button--icon" type="button">В корзину</button>
+              </div>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -309,7 +389,7 @@
           <h4 class="footer__title">Интернет-магазин</h4>
           <ul class="footer__list footer-list">
             <li class="footer-list__item">
-              <a class="footer-list__link" href="./catalog.html">Каталог</a>
+              <a class="footer-list__link" href="#catalog">Каталог</a>
             </li>
             <li class="footer-list__item">
               <a class="footer-list__link" href="./delivery.html">Доставка</a>
