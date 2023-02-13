@@ -84,13 +84,24 @@ const markerOptions = {
 const mapOptions = {
   attributionControl: false,
   zoomControl: false,
-  boxZoom: false,
-  scrollWheelZoom: 'center',
+  scrollWheelZoom: false,
+  boxZoom: true,
+  keyboard: false,
   center: shopPlace,
   zoom: 18,
 };
 
 const map = L.map('map', mapOptions);
+
+const enableMapZoom = (evt) => {
+  
+  if (evt.shiftKey === true) {
+    map.scrollWheelZoom.enable();
+  }
+};
+
+window.addEventListener('keydown', (evt) => enableMapZoom(evt));
+window.addEventListener('keyup', () => map.scrollWheelZoom.disable());
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 L.marker(shopPlace, markerOptions).addTo(map);
