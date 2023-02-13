@@ -1,0 +1,88 @@
+@use "./../global/variables" as v;
+@use "./../global/colors" as c;
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+}
+
+.pagination__list {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 40px);
+    gap: map-get(v.$indents, small);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pagination__text {
+    display: none;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        display: block;
+    }
+}
+
+.pagination__button {
+    display: block;
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    font-size: map-get(v.$font-size, medium);
+    line-height: map-get(v.$line-height, medium);
+    color: c.$base-primary;
+    background-color: c.$base-white;
+    
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        &:hover,
+        &:focus {
+            color: c.$base-white;
+            background-color: c.$primary-lighter;
+        }
+    }
+    
+    &:active {
+        color: c.$base-white;
+        background-color: c.$primary-darker;
+    }
+}
+
+.pagination__button--number {
+    
+    
+    &[aria-current="page"] {
+        font-weight: 600;
+        color: c.$base-black;
+        background-color: transparent;
+        cursor: default;
+    }
+
+    &:disabled {
+        color: c.$base-white;
+        background-color: c.$light-grey;
+        cursor: default;  
+    }
+}
+
+.pagination__button--backward,
+.pagination__button--forward {
+    width: 40px;
+
+    &:disabled {
+        color: c.$base-white;
+        background-color: c.$light-grey;
+        cursor: default;  
+    }
+}
+
+.pagination__button--backward {
+    margin-right: 20px;
+}
+
+.pagination__button--forward {
+    margin-left: 20px;
+    transform: rotate(180deg);
+}

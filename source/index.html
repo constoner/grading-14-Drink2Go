@@ -292,6 +292,49 @@
           </ul>
         </div>
       </div>
+      <div class="catalog__pagination pagination">
+        <button class="pagination__button pagination__button--backward button"
+        type="button"
+        aria-label="Назад."
+        >      
+          <svg class="pagination__icon"
+            fill="currentColor"
+            width="10"
+            height="10"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="./img/icons/stack.svg#page-arrow"/>
+          </svg>
+          <span class="pagination__text">Назад</span>
+        </button>
+        <ol class="pagination__list">
+          <li class="pagination__item">
+            <button class="pagination__button pagination__button--number button" type="button">1</button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__button pagination__button--number button" type="button" aria-current="page">2</button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__button pagination__button--number button" type="button">3</button>
+          </li>
+        </ol>
+        <button class="pagination__button pagination__button--forward button"
+        type="button"
+        aria-label="Вперёд."
+        >
+          <svg class="pagination__icon"
+            fill="currentColor"
+            width="10"
+            height="10"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <use href="./img/icons/stack.svg#page-arrow"/>
+          </svg>  
+          <span class="pagination__text">Вперёд</span>
+        </button>
+      </div>
     </section>
 
     <section class="map">      
