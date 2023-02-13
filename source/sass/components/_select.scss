@@ -3,7 +3,12 @@
 
 .select {
     display: flex;
+    justify-content: center;
     align-items: center;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        justify-content: end;
+    }
 }
 
 .select__label {
@@ -11,12 +16,12 @@
     font-size: map-get(v.$font-size, medium);
     line-height: map-get(v.$line-height, medium);
     font-weight: 600;
+    cursor: pointer;
 }
 
 .select__input {
-    flex-grow: 1;
     width: 165px;
-    padding: 4px 30px 4px 10px;
+    padding: 4px 25px 4px 10px;
     font-family: inherit;
     font-size: map-get(v.$font-size, medium);
     line-height: map-get(v.$line-height, medium);

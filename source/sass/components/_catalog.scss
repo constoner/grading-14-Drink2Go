@@ -4,10 +4,33 @@
 .catalog {
     padding: 50px map-get(v.$indents, small) 44px;
     background-color: c.$lightest-grey;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        padding: 50px map-get(v.$indents, large) 44px;
+    }
+}
+
+.catalog__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-direction: row;
+    }
+}
+
+.catalog__products-wrapper {
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-left: 30px;
+    }
 }
 
 .catalog__form {
     margin-bottom: 40px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+
+    }
 }
 
 .catalog__title {
@@ -17,6 +40,10 @@
 
 .catalog__select {
     margin-bottom: 16px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        
+    }
 }
 
 .catalog__list {
@@ -29,10 +56,12 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         grid-template-columns: repeat(2, 1fr);
+        gap: map-get(v.$indents, medium);
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         grid-template-columns: repeat(3, 1fr);
+        gap: map-get(v.$indents, medium);
     }
 }
 

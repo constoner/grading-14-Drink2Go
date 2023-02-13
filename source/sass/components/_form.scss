@@ -1,6 +1,23 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
+.form__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-bottom: 13px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: map-get(v.$indents, small);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
 .form__slider {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -24,10 +41,6 @@
 
 .form__input {
     flex-grow: 1;
-}
-
-.form__fieldset-wrapper {
-    padding-bottom: 13px;
 }
 
 .form__fieldset {
@@ -63,6 +76,11 @@
     justify-content: space-between;
     align-items: center;
     height: 115px;
+    
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
 .form__button {
@@ -73,4 +91,12 @@
     line-height: map-get(v.$line-height, medium);
     text-align: center;
     vertical-align: middle;
+        
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+
+
+        &:not(:first-child) {
+            margin-left: map-get(v.$indents, medium);
+        }
+    }
 }

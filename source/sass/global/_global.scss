@@ -21,6 +21,10 @@ body {
 img {
     display: block;
     max-width: 100%;
+
+    &:focus-visible {
+        outline: 2px solid c.$base-primary;
+    }
 }
 
 a, select, button {

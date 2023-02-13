@@ -14,10 +14,13 @@
 
 .button--main {
     background-color: c.$base-primary;
-    
-    &:hover,
-    &:focus {
-        background-color: c.$primary-lighter;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        
+        &:hover,
+        &:focus {
+            background-color: c.$primary-lighter;
+        }
     }
 
     &:active {
@@ -34,10 +37,12 @@
     color: c.$base-primary;
     background-color: c.$base-white;
     
-    &:hover,
-    &:focus {
-        color: c.$base-white;
-        background-color: c.$primary-lighter;
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        &:hover,
+        &:focus {
+            color: c.$base-white;
+            background-color: c.$primary-lighter;
+        }
     }
 
     &:active {
