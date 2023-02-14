@@ -18,6 +18,7 @@
         grid-template-columns: 1fr 1fr;
         gap: map-get(v.$indents, medium);
         justify-items: start;
+        align-items: center;
         height: 714px;
         padding: 30px 80px;
         padding-bottom: 84px;
