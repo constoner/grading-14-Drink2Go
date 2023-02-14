@@ -2,7 +2,8 @@
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
-  autoplay: true,
+  // autoplay: true,
+  centeredSlides: true,
 
   pagination: {
     el: '.swiper-pagination',
