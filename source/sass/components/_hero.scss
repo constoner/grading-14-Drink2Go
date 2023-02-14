@@ -1,7 +1,8 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
-.hero__slider {
+.hero__slider,
+.swiper {
     padding: 60px;
     height: 300px;
     background-color: c.$flat-white;

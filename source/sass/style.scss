@@ -1,3 +1,4 @@
+
 /* GLOBAL */
 @use "./global/fonts";
 @use "./global/variables";
@@ -14,6 +15,7 @@
 @use "./components/tag";
 @use "./components/title";
 @use "./components/hero";
+@use "./components/swiper";
 @use "./components/features";
 @use "./components/catalog";
 @use "./components/form";
@@ -30,3 +32,4 @@
 @use "./components/footer-list";
 @use "./components/address";
 @use "./components/credit";
+

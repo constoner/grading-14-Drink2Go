@@ -1,3 +1,36 @@
+
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  autoplay: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const menuButton = document.querySelector(".header__button");
 const menuContainer = document.querySelector(".site-navigation__list");
 const header = document.querySelector(".header--nojs")
