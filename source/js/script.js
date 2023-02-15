@@ -34,18 +34,13 @@ header.classList.remove("header--nojs");
 
 // переключатель состояния меню
 function menuToggle() {
+  burgerButton.classList.toggle("menu-button--opened");
   menuContainer.classList.toggle("site-navigation__list--opened");
 }
 
 // открытие/закрытие меню по кнопке
 menuButton.addEventListener("click", menuToggle);
-
-// переключатель кнопки меню
-function buttonToggle() {
-  burgerButton.classList.toggle("menu-button--opened");
-}
-
-burgerButton.addEventListener("click", buttonToggle);
+menuContainer.addEventListener("click", menuToggle);
 
 
 // рейндж-слайдер

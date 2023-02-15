@@ -24,10 +24,11 @@
 
     &--nojs {
         position: static;
-        width: 100vw;
+        width: calc(100vw - 40px);
         transform: scaleY(1);
+        
     }
-
+    
     &--opened {
         transform: scaleY(1);
     }
