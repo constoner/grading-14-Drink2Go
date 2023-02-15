@@ -18,6 +18,12 @@
     display: none;
   }
 
+  .swiper__button {
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+      top: calc(50% - 94px);
+    }
+  }
+
   .swiper__button::after {
     display: none;
   }
@@ -28,10 +34,18 @@
 
   .swiper__button--prev {
     left: -4px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+      left: 26px;
+    }
   }
 
   .swiper__button--next {
     right: -4px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+      right: 26px;
+    }
   }
 
   .swiper__button--next .swiper__icon {

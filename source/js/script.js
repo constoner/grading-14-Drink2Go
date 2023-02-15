@@ -157,5 +157,5 @@ const enableMapZoom = (evt) => {
 window.addEventListener('keydown', (evt) => enableMapZoom(evt));
 window.addEventListener('keyup', () => map.scrollWheelZoom.disable());
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+L.tileLayer('https://api.maptiler.com/maps/openstreetmap/256/{z}/{x}/{y}@2x.jpg?key=oJPXf6zaBAZnjnBlkWnf').addTo(map);
 L.marker(shopPlace, markerOptions).addTo(map);

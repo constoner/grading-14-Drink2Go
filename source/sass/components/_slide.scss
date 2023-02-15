@@ -12,7 +12,7 @@
     
     @media (min-width: map-get(v.$breakpoints, medium)) {
         height: 640px;
-        padding: 60px 80px;
+        padding: 59px 80px;
     }
     
     @media (min-width: map-get(v.$breakpoints, large)) {
@@ -64,7 +64,7 @@
         width: 476px;
         height: 476px;
         margin-bottom: 0;
-        margin-top: 10px;
+        margin-top: 20px;
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
@@ -89,6 +89,7 @@
     margin-bottom: 10px;
     font-size: map-get(v.$font-size, h1-small);
     line-height: map-get(v.$line-height, h1-small);
+    letter-spacing: 0.02em;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         margin-bottom: 16px;

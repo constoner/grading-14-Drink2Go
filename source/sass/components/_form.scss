@@ -8,11 +8,11 @@
     padding-bottom: 13px;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: map-get(v.$indents, small);
+        grid-template-columns: 30% 30% 1fr;
+        gap: map-get(v.$indents, medium);
     }
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
+    @media (min-width: map-get(v.$breakpoints, large)) {
         grid-template-columns: 1fr;
         gap: 24px;
     }
@@ -20,13 +20,23 @@
 
 .form__slider {
     margin-top: 10px;
-    margin-bottom: 21px;
+    margin-bottom: 37px;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-left: 4px;
+        margin-right: -9px;
+        margin-bottom: 34px;
+    }
 }
 
 .form__input-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-left: 6px;
+    }
 }
 
 .form__divider {
@@ -37,6 +47,10 @@
     margin: 0 18px;
     background-color: c.$base-grey;
     vertical-align: middle;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin: 0 13px;
+    }
 }
 
 .form__input {
@@ -58,6 +72,10 @@
 
     &--mod {
         margin-bottom: 22px;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-bottom: 20px;
     }
 }
 
@@ -89,6 +107,9 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         flex-direction: row;
         justify-content: center;
+        height: auto;
+        padding-top: 25px;
+        padding-right: 80px;
     }
 }
 
@@ -102,10 +123,9 @@
     vertical-align: middle;
         
     @media (min-width: map-get(v.$breakpoints, medium)) {
-
-
-        &:not(:first-child) {
-            margin-left: map-get(v.$indents, medium);
-        }
+        min-width: fit-content;
+        min-height: 40px;
+        margin-left: 24px;
+        padding: 5px;
     }
 }

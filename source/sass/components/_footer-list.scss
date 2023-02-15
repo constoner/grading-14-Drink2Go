@@ -17,6 +17,7 @@
     font-size: map-get(v.$font-size, small);
     line-height: map-get(v.$line-height, small);
     text-transform: uppercase;
+    letter-spacing: 0.02em;
     transition: color 0.2s ease-out;
     
     @media (min-width: map-get(v.$breakpoints, medium)) {

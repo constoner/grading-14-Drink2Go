@@ -7,6 +7,7 @@
     right: 0;
     top: 100%;
     margin: 0;
+    margin-left: 7px;
     padding: 0;
     list-style-type: none;
     background-color: c.$base-white;
@@ -53,6 +54,7 @@
     font-size: map-get(v.$font-size, small);
     line-height: map-get(v.$line-height, small);
     font-weight: 500;
+    letter-spacing: 0.02em;
     text-align: center;
     text-transform: uppercase;
 
@@ -67,6 +69,7 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         position: relative;
         height: 80px;
+        letter-spacing: 0.02em;
         transition: color 0.2s ease-out;
 
         &:hover,

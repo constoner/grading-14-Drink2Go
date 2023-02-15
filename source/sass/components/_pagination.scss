@@ -5,17 +5,22 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    width: 100%;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        justify-content: end;
+    }
 }
 
 .pagination__list {
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 40px);
-    gap: map-get(v.$indents, small);
+    display: flex;
+    justify-content: center;
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.pagination__item:not(:first-child) {
+    margin-left: 20px;
 }
 
 .pagination__text {
@@ -71,6 +76,12 @@
 .pagination__button--forward {
     width: 40px;
 
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        position: static;
+        width: auto;
+        padding: 8px 20px;
+    }
+
     &:disabled {
         color: c.$base-white;
         background-color: c.$light-grey;
@@ -85,4 +96,14 @@
 .pagination__button--forward {
     margin-left: 20px;
     transform: rotate(180deg);
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        transform: rotate(0deg);
+    }
+}
+
+.pagination__icon {
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        display: none;
+    }
 }

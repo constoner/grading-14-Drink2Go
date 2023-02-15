@@ -66,7 +66,7 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         flex-direction: row;
-        padding-top: 0;
+        padding: 0 map-get(v.$indents, small);
     }
 }
 
@@ -90,8 +90,12 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         width: 223px;
-        margin-left: map-get(v.$indents, medium);
+        margin: 0;
         padding: 0;
+
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
         
         &::after {
             display: none;
@@ -110,7 +114,12 @@
     font-size: map-get(v.$font-size, main);
     line-height: map-get(v.$line-height, main);
     font-weight: 700;
+    letter-spacing: 0.02em;
     color: c.$base-primary;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        margin-bottom: 17px;
+    }
 }
 
 .footer__address {
