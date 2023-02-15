@@ -1,10 +1,16 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
+.address {
+    margin-bottom: 12px;
+}
+
 .adress__text {
     position: relative;
     display: block;
-    margin-top: 16px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: -2px;
     padding-left: 19px;
     font-style: normal;
 
@@ -23,14 +29,14 @@
 
     &--address {
         &::before {
-            top: 0;
+            top: 4px;
             background-image: url("./../../img/icons/stack.svg#address");
         }
     }
 
     &--phone {
         &::before {
-            top: 2px;
+            top: 1px;
             background-image: url("./../../img/icons/stack.svg#phone");
         }
     }

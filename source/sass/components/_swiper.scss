@@ -26,6 +26,14 @@
     color: c.$base-primary;
   }
 
+  .swiper__button--prev {
+    left: -4px;
+  }
+
+  .swiper__button--next {
+    right: -4px;
+  }
+
   .swiper__button--next .swiper__icon {
     transform: rotate(180deg);
   }

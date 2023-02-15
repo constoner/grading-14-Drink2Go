@@ -2,7 +2,7 @@
 @use "./../global/colors" as c;
 
 .features {
-    padding: 50px map-get(v.$indents, small) 60PX;
+    padding: 50px map-get(v.$indents, small) 62px;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         padding: 60px map-get(v.$indents, medium) 100px;
@@ -47,7 +47,7 @@
 
 .features__item {
     position: relative;
-    padding-top: 66px;
+    padding-top: 68px;
     text-align: center;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
@@ -103,6 +103,7 @@
 .features__name {
     margin: 0;
     margin-bottom: 4px;
+    margin-top: -1px;
     font-size: map-get(v.$font-size, h3-small);
     line-height: map-get(v.$line-height, h3-small);
     font-weight: 700;

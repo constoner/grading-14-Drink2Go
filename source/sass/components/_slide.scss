@@ -4,6 +4,7 @@
 .slide {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: min-content;
     justify-items: center;
     height: 100%;
     padding: map-get(v.$indents, small);
@@ -54,7 +55,7 @@
 
 
 .slide__image {
-    margin-bottom: 10px;
+    margin-bottom: 9px;
     object-fit: cover;
     width: auto;
     max-height: 100%;
@@ -75,6 +76,8 @@
 }
 
 .slide__tag {
+    margin-bottom: 5px;
+    
     @media (min-width: map-get(v.$breakpoints, large)) {
         text-align: left;
     }
@@ -116,7 +119,7 @@
 }
 
 .slide__old-price {
-    margin-right: 6px;
+    margin-right: 7px;
     font-size: map-get(v.$font-size, medium);
     line-height: map-get(v.$line-height, large);
     color: c.$base-primary;

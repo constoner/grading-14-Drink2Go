@@ -72,6 +72,7 @@
 
 .footer__wrapper {
     position: relative;
+    margin-bottom: 10px;
     padding: map-get(v.$indents, small);
     padding-top: map-get(v.$indents, small);
     padding-bottom: 0;
@@ -79,7 +80,7 @@
     &::after {
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: -12px;
         display: block;
         width: 100%;
         height: 1px;
@@ -105,7 +106,7 @@
 
 .footer__title {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     font-size: map-get(v.$font-size, main);
     line-height: map-get(v.$line-height, main);
     font-weight: 700;

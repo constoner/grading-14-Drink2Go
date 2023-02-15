@@ -4,7 +4,7 @@
 .form__wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 23px;
     padding-bottom: 13px;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
@@ -20,7 +20,7 @@
 
 .form__slider {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 21px;
 }
 
 .form__input-container {
@@ -34,7 +34,7 @@
     display: inline-block;
     width: 8px;
     height: 2px;
-    margin: 0 14px;
+    margin: 0 18px;
     background-color: c.$base-grey;
     vertical-align: middle;
 }
@@ -46,17 +46,19 @@
 .form__fieldset {
     margin: 0;
     padding: 0;
-    padding-bottom: 23px;
     border: none;
 }
 
 .form__legend {
-    margin-top: 1px;
     margin-bottom: 23px;
     padding: 0;
     font-size: map-get(v.$font-size, medium);
     line-height: map-get(v.$line-height, medium);
     font-weight: 600;
+
+    &--mod {
+        margin-bottom: 22px;
+    }
 }
 
 .form__label {
@@ -65,17 +67,24 @@
     width: fit-content;
     
     &:not(:last-child) {
-        margin-bottom: 23px;
+        margin-bottom: 21px;
     }
 }
 
+.form__legend--mod + .form__label {
+        
+    &:not(:last-child) {
+        margin-bottom: 19px;
+    }
+}
 
 .form__button-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 115px;
+    height: 135px;
+    padding-top: 20px;
     
     @media (min-width: map-get(v.$breakpoints, medium)) {
         flex-direction: row;

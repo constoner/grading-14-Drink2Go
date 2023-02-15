@@ -1,8 +1,10 @@
 @use "./../global/variables" as v;
 @use "./../global/colors" as c;
 
-#slider {
-    position: relative;
+.slider {
+    height: 2px;
+    margin-bottom: 37px;
+    padding: 0 13px;
     background-color: transparent;
     border: none;
     box-shadow: none;
@@ -12,25 +14,31 @@
     }
 }
 
-#slider .noUi-origin {
-    position: relative;
-    width: calc(100% - 24px);
-}
-
-#slider .noUi-base {
-    width: 100%;
-    height: 4px;
+.slider__base {
+    height: 2px !important;
     background-color: c.$light-grey;
 }
 
-#slider .noUi-connect {
+.slider__connects {
     height: 4px;
+    top: -1px;
+}
+
+.slider__connect {
     background-color: c.$primary-lighter;
 }
 
-#slider .noUi-handle {
+.slider .slider__touch-area {
     position: absolute;
-    top: -2px;
+    right: -7px;
+    top: -7px;
+    width: 34px;
+    height: 34px;
+}
+
+.slider .slider__handle {
+    right: -12px;
+    top: -10px;
     width: 24px;
     height: 24px;
     background-color: c.$base-white;
@@ -46,57 +54,55 @@
 
     &::before {
         position: absolute;
-        top: 2px;
-        left: 2px;
+        top: 50%;
+        left: 50%;
         display: block;
         width: 16px;
         height: 16px;
+        transform: translate(-50%, -50%);
         background-color: transparent;
         border-radius: 50%;
         transition: all 0.2s ease-out;
         content: "";
     }
 
-    &:hover::before,
-    &:focus::before {
-        background-color: c.$primary-opacity;
-    }
-
-    &:focus {
-        outline: 2px solid c.$base-primary; 
-    }
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        
+            &:hover::before,
+            &:focus::before {
+                background-color: c.$primary-opacity;
+            }
+        
+            &:focus {
+                outline: 2px solid c.$base-primary; 
+            }
+        }
+        
+        &:active {
+            border-color: c.$base-primary;
+        }
     
-    &:active {
-        border-color: c.$base-primary;
-        outline: none;
-    }
-
-    &:active::before {
-        background-color: c.$base-primary;
-    }
+        &:active::before {
+            background-color: c.$base-primary;
+        }
+        
+        &:focus-visible {
+            outline: 2px solid c.$base-primary;
+        }
 }
 
-#slider .noUi-handle-lower {
-    left: calc(100% + 12px);
-    transform: translate(-50%, -50%);
-}
-
-#slider .noUi-handle-upper {
-    left: calc(100% + 12px);
-    transform: translate(-50%, -50%);
-}
 
 // стили для отключенного слайдера
-#slider[disabled] {
+.slider[disabled] {
     cursor: default;
 
 }
 
-#slider[disabled] .noUi-connect {
+.slider[disabled] .slider__connect {
     background-color: c.$light-grey;
 }
 
-#slider[disabled] .noUi-handle {
+.slider[disabled] .slider__handle {
     background-color: c.$lightest-grey;
     border-color: c.$light-grey;
     cursor: default;

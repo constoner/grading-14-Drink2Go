@@ -29,18 +29,21 @@
 }
 
 // стили для ховера и фокуса
-.custom-radio__input:hover + .custom-radio__button,
-.custom-radio__input:focus-visible + .custom-radio__button {
-    border-color: c.$primary-lighter;
-}
-
-.custom-radio__input:hover + .custom-radio__button::after,
-.custom-radio__input:focus-visible + .custom-radio__button::after {
-    background-color: c.$primary-opacity;
-    opacity: 1;
-    transform: scale(1) translate(-50%, -50%);
-    transform-origin: 0, 0;
-    transition-delay: 0.1s;
+@media (min-width: map-get(v.$breakpoints, large)) {
+    
+    .custom-radio__input:hover + .custom-radio__button,
+    .custom-radio__input:focus-visible + .custom-radio__button {
+        border-color: c.$primary-lighter;
+    }
+    
+    .custom-radio__input:hover + .custom-radio__button::after,
+    .custom-radio__input:focus-visible + .custom-radio__button::after {
+        background-color: c.$primary-opacity;
+        opacity: 1;
+        transform: scale(1) translate(-50%, -50%);
+        transform-origin: 0, 0;
+        transition-delay: 0.1s;
+    }
 }
 
 // стили для выбранной кнопки

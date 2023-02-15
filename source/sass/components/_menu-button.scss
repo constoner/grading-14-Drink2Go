@@ -45,18 +45,18 @@
   }
 
   &::before {
-    top: -6px;
+    top: -5px;
   }
 
   &::after {
-    bottom: -6px;
+    bottom: -5px;
   }
 }
 
 .menu-button__X {
   position: absolute;
-  top: 50%;
-  left: 31%;
+  top: 48%;
+  left: 36%;
   display: block;
   transform-origin: center center;
   transform: translate(-50%, -50%) scaleY(0);
@@ -66,7 +66,7 @@
   &::after {
     position: absolute;
     display: block;
-    width: 22px;
+    width: 16px;
     height: 1.5px;
     background-color: c.$base-black;
     content: "";

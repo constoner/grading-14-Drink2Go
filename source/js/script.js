@@ -17,21 +17,7 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// бургер меню
 const menuButton = document.querySelector(".header__button");
 const menuContainer = document.querySelector(".site-navigation__list");
 const header = document.querySelector(".header--nojs")
@@ -81,6 +67,44 @@ noUiSlider.create(slider, {
         'min': MIN,
         'max': MAX
     },
+    cssClasses: {
+      target: "target",
+      base: "base slider__base",
+      origin: "origin",
+      handle: "handle slider__handle",
+      handleLower: "handle-lower",
+      handleUpper: "handle-upper",
+      touchArea: "touch-area slider__touch-area",
+      horizontal: "horizontal",
+      vertical: "vertical",
+      background: "background",
+      connect: "connect slider__connect",
+      connects: "connects slider__connects",
+      ltr: "ltr",
+      rtl: "rtl",
+      textDirectionLtr: "txt-dir-ltr",
+      textDirectionRtl: "txt-dir-rtl",
+      draggable: "draggable",
+      drag: "state-drag",
+      tap: "state-tap",
+      active: "active",
+      tooltip: "tooltip",
+      pips: "pips",
+      pipsHorizontal: "pips-horizontal",
+      pipsVertical: "pips-vertical",
+      marker: "marker",
+      markerHorizontal: "marker-horizontal",
+      markerVertical: "marker-vertical",
+      markerNormal: "marker-normal",
+      markerLarge: "marker-large",
+      markerSub: "marker-sub",
+      value: "value",
+      valueHorizontal: "value-horizontal",
+      valueVertical: "value-vertical",
+      valueNormal: "value-normal",
+      valueLarge: "value-large",
+      valueSub: "value-sub"
+  }
 });
 
 const onSliderChange = () => {
@@ -103,7 +127,8 @@ inputContainer.addEventListener('input', () => onInputChange());
 resetButton.addEventListener('click', () => slider.noUiSlider.reset());
 
 // интерактивная карта
-const shopPlace = [59.96839, 30.31758]; // подобрал числа по гуглкартам и макету
+const mapCenter = [59.96842, 30.31755]; // подобрал числа по гуглкартам и макету
+const shopPlace = [59.96835, 30.31763]; // подобрал числа по гуглкартам и макету
 
 const markerIcon = L.icon({
   iconUrl: './img/map-pin.svg',
@@ -121,7 +146,7 @@ const mapOptions = {
   scrollWheelZoom: false,
   boxZoom: true,
   keyboard: false,
-  center: shopPlace,
+  center: mapCenter,
   zoom: 18,
 };
 

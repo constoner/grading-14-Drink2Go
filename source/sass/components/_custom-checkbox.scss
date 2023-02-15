@@ -29,10 +29,13 @@
 }
 
 // стили для ховера и фокуса
-.custom-checkbox__input:hover + .custom-checkbox__button,
-.custom-checkbox__input:focus-visible + .custom-checkbox__button {
-    background-color: c.$primary-opacity;
-    border-color: c.$primary-lighter;
+@media (min-width: map-get(v.$breakpoints, large)) {
+    
+    .custom-checkbox__input:hover + .custom-checkbox__button,
+    .custom-checkbox__input:focus-visible + .custom-checkbox__button {
+        background-color: c.$primary-opacity;
+        border-color: c.$primary-lighter;
+    }
 }
 
 // стили для выбранной кнопки

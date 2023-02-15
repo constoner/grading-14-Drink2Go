@@ -31,8 +31,11 @@
         text-align: center;
     }
 
-    &:hover {
-        border: 2px solid c.$primary-darker;
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        
+            &:hover {
+                border: 2px solid c.$primary-darker;
+            }
     }
 
     &:focus,
