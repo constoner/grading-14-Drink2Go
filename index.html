@@ -11,11 +11,21 @@
   <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./js/script.min.js" as="script">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff" as="font" type="font/woff">
   <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="./vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="preload" href="./js/script.min.js" as="script">
 </head>
 
 <body class="body">
@@ -98,9 +108,12 @@
         <div class="swiper__wrapper swiper-wrapper">
           <div class="swiper__slide swiper-slide slide slide--flat">
             <picture>
+              <source type="image/webp" media="(min-width: 1400px)" srcset="./img/swiper/flat-white-large.webp, ./img/swiper/flat-white-large@2x.webp 2x"> 
               <source media="(min-width: 1400px)" srcset="./img/swiper/flat-white-large.png, ./img/swiper/flat-white-large@2x.png 2x"> 
+              <source type="image/webp" media="(min-width: 750px)" srcset="./img/swiper/flat-white-medium.webp, ./img/swiper/flat-white-medium@2x.webp 2x"> 
               <source media="(min-width: 750px)" srcset="./img/swiper/flat-white-medium.png, ./img/swiper/flat-white-medium@2x.png 2x"> 
-              <img class="slide__image" src="./img/swiper/flat-white-small.png" srcset="./img/swiper/flat-white-small@2x.png 2x" width="280" height="280" alt="Изобржение товара 1.">
+              <source type="image/webp" srcset="./img/swiper/flat-white-small.webp, ./img/swiper/flat-white-small@2x.webp 2x"> 
+              <img class="slide__image" src="./img/swiper/flat-white-small.png" srcset="./img/swiper/flat-white-small@2x.png 2x" width="280" height="280" alt="Промо-фото товара 1.">
             </picture>
             <div class="slide__wrapper">
               <p class="slide__tag tag">Новинка!</p>
@@ -115,9 +128,12 @@
           </div>
           <div class="swiper__slide swiper-slide slide slide--lavender">
             <picture>
+              <source type="image/webp" media="(min-width: 1400px)" srcset="./img/swiper/lavender-large.webp, ./img/swiper/lavender-large@2x.webp 2x"> 
               <source media="(min-width: 1400px)" srcset="./img/swiper/lavender-large.png, ./img/swiper/lavender-large@2x.png 2x"> 
+              <source type="image/webp" media="(min-width: 750px)" srcset="./img/swiper/lavender-medium.webp, ./img/swiper/lavender-medium@2x.webp 2x"> 
               <source media="(min-width: 750px)" srcset="./img/swiper/lavender-medium.png, ./img/swiper/lavender-medium@2x.png 2x"> 
-              <img class="slide__image" src="./img/swiper/lavender-small.png" srcset="./img/swiper/lavender-small@2x.png 2x" width="280" height="280" alt="Изобржение товара 1.">
+              <source type="image/webp" srcset="./img/swiper/lavender-small.webp, ./img/swiper/lavender-small@2x.webp 2x"> 
+              <img class="slide__image" src="./img/swiper/lavender-small.png" srcset="./img/swiper/lavender-small@2x.png 2x" width="280" height="280" alt="Промо-фото товара 2.">
             </picture>
             <div class="slide__wrapper">
               <p class="slide__tag tag">Новинка!</p>
@@ -132,9 +148,12 @@
           </div>
           <div class="swiper__slide swiper-slide slide slide--espresso">
             <picture>
+              <source type="image/webp" media="(min-width: 1400px)" srcset="./img/swiper/espresso-large.webp, ./img/swiper/espresso-large@2x.webp 2x"> 
               <source media="(min-width: 1400px)" srcset="./img/swiper/espresso-large.png, ./img/swiper/espresso-large@2x.png 2x"> 
+              <source type="image/webp" media="(min-width: 750px)" srcset="./img/swiper/espresso-medium.webp, ./img/swiper/espresso-medium@2x.webp 2x"> 
               <source media="(min-width: 750px)" srcset="./img/swiper/espresso-medium.png, ./img/swiper/espresso-medium@2x.png 2x"> 
-              <img class="slide__image" src="./img/swiper/espresso-small.png" srcset="./img/swiper/espresso-small@2x.png 2x" width="280" height="280" alt="Изобржение товара 1.">
+              <source type="image/webp" srcset="./img/swiper/espresso-small.webp, ./img/swiper/espresso-small@2x.webp 2x"> 
+              <img class="slide__image" src="./img/swiper/espresso-small.png" srcset="./img/swiper/espresso-small@2x.png 2x" width="280" height="280" alt="Промо-фото товара 3.">
             </picture>
             <div class="slide__wrapper">
               <p class="slide__tag tag">Новинка!</p>
@@ -218,22 +237,22 @@
   
             <fieldset class="form__fieldset">
               <legend class="form__legend">Наличие молока</legend>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk" value="default" checked>
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Неважно</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="animal">
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Только животное</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="vegan">
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Только растительное</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="no-milk" disabled>
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Без молока</span>
@@ -242,27 +261,27 @@
     
             <fieldset class="form__fieldset">
               <legend class="form__legend form__legend--mod">Страна произрастания</legend>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin" value="brazil" checked>
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Бразилия</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="ethiopia">
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Эфиопия</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="colombia">
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Колумбия</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="costa-rica">
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Коста-Рика</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="peru" disabled>
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Перу</span>
@@ -291,7 +310,10 @@
           <ul class="catalog__list">
             <li class="catalog__item product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./img/products/product-1.png" srcset="./img/products/product-1@2x.png 2x" width="130" height="188" alt="Изобржение товара 1." loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="./img/products/product-1.webp, ./img/products/product-1@2x.webp 2x"> 
+                  <img class="product-card__image" src="./img/products/product-1.png" srcset="./img/products/product-1@2x.png 2x" width="130" height="188" alt="Изобржение товара 1." loading="lazy">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
@@ -304,7 +326,10 @@
             </li>
             <li class="catalog__item product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./img/products/product-2.png" srcset="./img/products/product-2@2x.png 2x" width="130" height="188" alt="Изобржение товара 2." loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="./img/products/product-2.webp, ./img/products/product-2@2x.webp 2x"> 
+                  <img class="product-card__image" src="./img/products/product-2.png" srcset="./img/products/product-2@2x.png 2x" width="130" height="188" alt="Изобржение товара 2." loading="lazy">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
@@ -317,7 +342,10 @@
             </li>
             <li class="catalog__item product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./img/products/product-3.png" srcset="./img/products/product-3@2x.png 2x" width="130" height="188" alt="Изобржение товара 3." loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="./img/products/product-3.webp, ./img/products/product-3@2x.webp 2x"> 
+                  <img class="product-card__image" src="./img/products/product-3.png" srcset="./img/products/product-3@2x.png 2x" width="130" height="188" alt="Изобржение товара 3." loading="lazy">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
@@ -330,7 +358,10 @@
             </li>
             <li class="catalog__item product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./img/products/product-4.png" srcset="./img/products/product-4@2x.png 2x" width="130" height="188" alt="Изобржение товара 4." loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="./img/products/product-4.webp, ./img/products/product-4@2x.webp 2x"> 
+                  <img class="product-card__image" src="./img/products/product-4.png" srcset="./img/products/product-4@2x.png 2x" width="130" height="188" alt="Изобржение товара 4." loading="lazy">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
@@ -343,7 +374,10 @@
             </li>
             <li class="catalog__item product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./img/products/product-5.png" srcset="./img/products/product-5@2x.png 2x" width="130" height="188" alt="Изобржение товара 5." loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="./img/products/product-5.webp, ./img/products/product-5@2x.webp 2x"> 
+                  <img class="product-card__image" src="./img/products/product-5.png" srcset="./img/products/product-5@2x.png 2x" width="130" height="188" alt="Изобржение товара 5." loading="lazy">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
@@ -356,7 +390,10 @@
             </li>
             <li class="catalog__item product-card">
               <a class="product-card__link" href="#">
-                <img class="product-card__image" src="./img/products/product-6.png" srcset="./img/products/product-6@2x.png 2x" width="130" height="188" alt="Изобржение товара 6." loading="lazy">
+                <picture>
+                  <source type="image/webp" srcset="./img/products/product-6.webp, ./img/products/product-6@2x.webp 2x"> 
+                  <img class="product-card__image" src="./img/products/product-6.png" srcset="./img/products/product-6@2x.png 2x" width="130" height="188" alt="Изобржение товара 6." loading="lazy">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
@@ -417,20 +454,17 @@
 
     <section class="map">      
       <h2 class="visually-hidden">Мы на карте.</h2>
+
       <!-- fallback map -->
       <picture>
-        <source media="(min-width: 1400px)" srcset="./img/fallback-map-large.png">
-        <source media="(min-width: 750px)" srcset="./img/fallback-map-medium.png">
-        <img
-          class="map__image"
-          src="./img/fallback-map-small.png"
-          sizes="(min-width: 320px) 320px,
-          (min-width: 750px) 768px,
-          (min-width: 1400px) 1440px"
-          alt="Карта города."
-          loading="lazy"
-        >
+        <source type="image/webp" media="(min-width: 1400px)" srcset="./img/fallback-map-large.webp, ./img/fallback-map-large@2x.webp 2x"> 
+        <source media="(min-width: 1400px)" srcset="./img/fallback-map-large.png, ./img/fallback-map-large@2x.png 2x"> 
+        <source type="image/webp" media="(min-width: 750px)" srcset="./img/fallback-map-medium.webp, ./img/fallback-map-medium@2x.webp 2x"> 
+        <source media="(min-width: 750px)" srcset="./img/fallback-map-medium.png, ./img/fallback-map-medium@2x.png 2x"> 
+        <source type="image/webp" srcset="./img/fallback-map--small.webp, ./img/fallback-map-small@2x.webp 2x"> 
+        <img class="map__image" src="./img/fallback-map-small.png" srcset="./img/fallback-map-small@2x.png 2x" width="100%" alt="Санкт-Петербург, набережная реки Карповки, дом 5." loading="lazy"">
       </picture>
+
       <!-- leaflet map -->
       <div class="map__container" id="map"></div>
     </section>  
@@ -438,6 +472,7 @@
   </main>
   
   <footer class="footer page-wrapper">
+    <h2 class="visually-hidden">Дополнительная информация.</h2>
     <div class="footer__container">
       <div class="footer__social">
         <a class="footer__link logo logo--bigger" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
@@ -509,7 +544,7 @@
       </div>
       <nav class="footer__navigation">
         <div class="footer__wrapper">
-          <h4 class="footer__title">Интернет-магазин</h4>
+          <h3 class="footer__title">Интернет-магазин</h3>
           <ul class="footer__list footer-list">
             <li class="footer-list__item">
               <a class="footer-list__link" href="#catalog">Каталог</a>
@@ -526,7 +561,7 @@
           </ul>
         </div>
         <div class="footer__wrapper">
-          <h4 class="footer__title">Медиа</h4>
+          <h3 class="footer__title">Медиа</h3>
           <ul class="footer__list footer-list">
             <li class="footer-list__item">
               <a class="footer-list__link" href="./blog.html">Блог</a>
@@ -540,12 +575,12 @@
           </ul>
         </div>
         <div class="footer__wrapper">
-          <h4 class="footer__title">Контакты</h4>
+          <h3 class="footer__title">Контакты</h3>
           <address class="footer__address address">
-              <p class="adress__text adress__text--address">
+              <p class="address__text address__text--address">
                 Санкт-Петербург, набережная реки Карповки, дом 5
               </p>
-              <a class="adress__text adress__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+              <a class="address__text address__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </address>
         </div>
       </nav>
@@ -574,6 +609,6 @@
   <script src="./vendor/swiper/swiper-bundle.js" type="text/javascript"></script>
   <script src="./vendor/nouislider/nouislider.js" type="text/javascript"></script>
   <script src="./vendor/leaflet/leaflet.js" type="text/javascript"></script>
-  <script src="./js/script.min.js" type="module" defer></script>
+  <script src="./js/script.min.js" type="module"></script>
 </body>
 </html>
