@@ -11,11 +11,21 @@
   <link rel="icon" href="./img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple.png">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./js/script.min.js" as="script">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff" as="font" type="font/woff">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff" as="font" type="font/woff">
   <link rel="stylesheet" href="./vendor/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="./vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="./vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="preload" href="./js/script.min.js" as="script">
 </head>
 
 <body class="body">
@@ -218,22 +228,22 @@
   
             <fieldset class="form__fieldset">
               <legend class="form__legend">Наличие молока</legend>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk" value="default" checked>
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Неважно</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="animal">
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Только животное</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="vegan">
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Только растительное</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-radio">
                 <input class="visually-hidden custom-radio__input" type="radio" name="milk"  value="no-milk" disabled>
                 <span class="custom-radio__button"></span>
                 <span class="custom-radio__label" >Без молока</span>
@@ -242,27 +252,27 @@
     
             <fieldset class="form__fieldset">
               <legend class="form__legend form__legend--mod">Страна произрастания</legend>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin" value="brazil" checked>
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Бразилия</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="ethiopia">
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Эфиопия</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="colombia">
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Колумбия</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="costa-rica">
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Коста-Рика</span>
               </label>
-              <label class="form__label">
+              <label class="form__label custom-checkbox">
                 <input class="visually-hidden custom-checkbox__input" type="checkbox" name="origin"  value="peru" disabled>
                 <span class="custom-checkbox__button"></span>
                 <span class="custom-checkbox__label" >Перу</span>
@@ -418,19 +428,17 @@
     <section class="map">      
       <h2 class="visually-hidden">Мы на карте.</h2>
       <!-- fallback map -->
-      <picture>
-        <source media="(min-width: 1400px)" srcset="./img/fallback-map-large.png">
-        <source media="(min-width: 750px)" srcset="./img/fallback-map-medium.png">
-        <img
-          class="map__image"
-          src="./img/fallback-map-small.png"
-          sizes="(min-width: 320px) 320px,
-          (min-width: 750px) 768px,
-          (min-width: 1400px) 1440px"
-          alt="Карта города."
-          loading="lazy"
-        >
-      </picture>
+      <img
+        class="map__image"
+        src="./img/fallback-map-small.png"
+        width="320"
+        srcset="./img/fallback-map-small.png 320w, ./img/fallback-map-medium.png 768w, ./img/fallback-map-large.png 1440w"
+        sizes="(min-width: 320px) 320px,
+        (min-width: 750px) 768px,
+        (min-width: 1400px) 1440px"
+        alt="Санкт-Петербург, набережная реки Карповки, дом 5."
+        loading="lazy"
+      >
       <!-- leaflet map -->
       <div class="map__container" id="map"></div>
     </section>  
@@ -438,6 +446,7 @@
   </main>
   
   <footer class="footer page-wrapper">
+    <h2 class="visually-hidden">Дополнительная информация.</h2>
     <div class="footer__container">
       <div class="footer__social">
         <a class="footer__link logo logo--bigger" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
@@ -509,7 +518,7 @@
       </div>
       <nav class="footer__navigation">
         <div class="footer__wrapper">
-          <h4 class="footer__title">Интернет-магазин</h4>
+          <h3 class="footer__title">Интернет-магазин</h3>
           <ul class="footer__list footer-list">
             <li class="footer-list__item">
               <a class="footer-list__link" href="#catalog">Каталог</a>
@@ -526,7 +535,7 @@
           </ul>
         </div>
         <div class="footer__wrapper">
-          <h4 class="footer__title">Медиа</h4>
+          <h3 class="footer__title">Медиа</h3>
           <ul class="footer__list footer-list">
             <li class="footer-list__item">
               <a class="footer-list__link" href="./blog.html">Блог</a>
@@ -540,12 +549,12 @@
           </ul>
         </div>
         <div class="footer__wrapper">
-          <h4 class="footer__title">Контакты</h4>
+          <h3 class="footer__title">Контакты</h3>
           <address class="footer__address address">
-              <p class="adress__text adress__text--address">
+              <p class="address__text address__text--address">
                 Санкт-Петербург, набережная реки Карповки, дом 5
               </p>
-              <a class="adress__text adress__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+              <a class="address__text address__text--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </address>
         </div>
       </nav>
@@ -574,6 +583,6 @@
   <script src="./vendor/swiper/swiper-bundle.js" type="text/javascript"></script>
   <script src="./vendor/nouislider/nouislider.js" type="text/javascript"></script>
   <script src="./vendor/leaflet/leaflet.js" type="text/javascript"></script>
-  <script src="./js/script.min.js" type="module" defer></script>
+  <script src="./js/script.min.js" type="module"></script>
 </body>
 </html>

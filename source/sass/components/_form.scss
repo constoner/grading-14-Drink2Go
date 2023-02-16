@@ -156,7 +156,7 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         min-width: fit-content;
         min-height: 40px;
-        padding: 4px !important;
+        padding: 4px !important; // перебиваю класс .button, поскольку это единственная кнопка с такими падингами (только изза PixelPerfect)
 
         &:not(:first-child) {
             margin-left: 30px;

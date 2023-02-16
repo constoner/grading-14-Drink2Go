@@ -21,25 +21,25 @@ const swiper = new Swiper('.swiper', {
 
 
 // бургер меню
-const menuButton = document.querySelector(".header__button");
-const menuContainer = document.querySelector(".site-navigation__list");
-const header = document.querySelector(".header--nojs")
-const burgerButton = document.querySelector(".menu-button");
+const menuButton = document.querySelector('.header__button');
+const menuContainer = document.querySelector('.site-navigation__list');
+const header = document.querySelector('.header--nojs')
+const burgerButton = document.querySelector('.menu-button');
 
 // скрытие меню по-умолчанию
-menuButton.classList.toggle("header__button--nojs");
-menuContainer.classList.remove("site-navigation__list--nojs");
-header.classList.remove("header--nojs");
+menuButton.classList.toggle('header__button--nojs');
+menuContainer.classList.remove('site-navigation__list--nojs');
+header.classList.remove('header--nojs');
 
 // переключатель состояния меню
 function menuToggle() {
-  burgerButton.classList.toggle("menu-button--opened");
-  menuContainer.classList.toggle("site-navigation__list--opened");
+  burgerButton.classList.toggle('menu-button--opened');
+  menuContainer.classList.toggle('site-navigation__list--opened');
 }
 
 // открытие/закрытие меню по кнопке
-menuButton.addEventListener("click", menuToggle);
-menuContainer.addEventListener("click", menuToggle);
+menuButton.addEventListener('click', menuToggle);
+menuContainer.addEventListener('click', menuToggle);
 
 
 // рейндж-слайдер
@@ -62,42 +62,42 @@ noUiSlider.create(slider, {
         'max': MAX
     },
     cssClasses: {
-      target: "target",
-      base: "base slider__base",
-      origin: "origin",
-      handle: "handle slider__handle",
-      handleLower: "handle-lower",
-      handleUpper: "handle-upper",
-      touchArea: "touch-area slider__touch-area",
-      horizontal: "horizontal",
-      vertical: "vertical",
-      background: "background",
-      connect: "connect slider__connect",
-      connects: "connects slider__connects",
-      ltr: "ltr",
-      rtl: "rtl",
-      textDirectionLtr: "txt-dir-ltr",
-      textDirectionRtl: "txt-dir-rtl",
-      draggable: "draggable",
-      drag: "state-drag",
-      tap: "state-tap",
-      active: "active",
-      tooltip: "tooltip",
-      pips: "pips",
-      pipsHorizontal: "pips-horizontal",
-      pipsVertical: "pips-vertical",
-      marker: "marker",
-      markerHorizontal: "marker-horizontal",
-      markerVertical: "marker-vertical",
-      markerNormal: "marker-normal",
-      markerLarge: "marker-large",
-      markerSub: "marker-sub",
-      value: "value",
-      valueHorizontal: "value-horizontal",
-      valueVertical: "value-vertical",
-      valueNormal: "value-normal",
-      valueLarge: "value-large",
-      valueSub: "value-sub"
+      target: 'target',
+      base: 'base slider__base',
+      origin: 'origin',
+      handle: 'handle slider__handle',
+      handleLower: 'handle-lower',
+      handleUpper: 'handle-upper',
+      touchArea: 'touch-area slider__touch-area',
+      horizontal: 'horizontal',
+      vertical: 'vertical',
+      background: 'background',
+      connect: 'connect slider__connect',
+      connects: 'connects slider__connects',
+      ltr: 'ltr',
+      rtl: 'rtl',
+      textDirectionLtr: 'txt-dir-ltr',
+      textDirectionRtl: 'txt-dir-rtl',
+      draggable: 'draggable',
+      drag: 'state-drag',
+      tap: 'state-tap',
+      active: 'active',
+      tooltip: 'tooltip',
+      pips: 'pips',
+      pipsHorizontal: 'pips-horizontal',
+      pipsVertical: 'pips-vertical',
+      marker: 'marker',
+      markerHorizontal: 'marker-horizontal',
+      markerVertical: 'marker-vertical',
+      markerNormal: 'marker-normal',
+      markerLarge: 'marker-large',
+      markerSub: 'marker-sub',
+      value: 'value',
+      valueHorizontal: 'value-horizontal',
+      valueVertical: 'value-vertical',
+      valueNormal: 'value-normal',
+      valueLarge: 'value-large',
+      valueSub: 'value-sub'
   }
 });
 

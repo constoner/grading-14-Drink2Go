@@ -122,7 +122,7 @@ display: none;
 
 @media (min-width: map-get(v.$breakpoints, large)) {
   display: block;
-  bottom: 64px !important;
+  bottom: 64px !important; // перебиваю стандартную стилизацию SwiperJS
 }
 }
 
