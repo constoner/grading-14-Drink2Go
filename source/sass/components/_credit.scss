@@ -4,6 +4,7 @@
 .credit {
     width: fit-content;
     margin: 0 auto;
+    padding-top: 20px;
     padding-bottom: map-get(v.$indents, medium);
     font-size: map-get(v.$font-size, small);
     line-height: map-get(v.$line-height, small);
@@ -11,6 +12,10 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         padding-bottom: map-get(v.$indents, large);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        padding-top: 0;
     }
 }
 

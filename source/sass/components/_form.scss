@@ -24,11 +24,12 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         margin-left: 4px;
-        margin-right: -9px;
+        margin-right: 4px;
         margin-bottom: 34px;
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-right: -9px;
         margin-left: -2px;
     }
 }
@@ -39,11 +40,14 @@
     align-items: center;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
+        justify-content: flex-start;
         margin-left: 6px;
+        padding-right: 10px;
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         margin-left: 0;
+        margin-right: -9px;
         margin-bottom: 8px;
     }
 }
@@ -58,10 +62,11 @@
     vertical-align: middle;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin: 0 13px;
+        width: 7px;
+        margin: 0 14px;
     }
-
-    @media (min-width: map-get(v.$breakpoints, medium)) {
+    
+    @media (min-width: map-get(v.$breakpoints, large)) {
         flex-grow: 0;
         width: 10px;
         margin: 0 20px;
@@ -113,6 +118,7 @@
 
 .form__button-wrapper {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -122,9 +128,10 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         flex-direction: row;
         justify-content: center;
+        margin: 0 auto;
         height: auto;
         padding-top: 25px;
-        padding-right: 80px;
+        padding-right: 56px;
     }
     
     @media (min-width: map-get(v.$breakpoints, large)) {
@@ -149,12 +156,16 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         min-width: fit-content;
         min-height: 40px;
-        padding: 5px;
+        padding: 4px !important;
+
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
     }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        // min-width: 150px;
-        margin: 0;
-        padding: 4px !important;
+    @media (min-width: map-get(v.$breakpoints, large)) {        
+        &:not(:first-child) {
+            margin-left: 18px;
+        }
     }
 }

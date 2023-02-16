@@ -24,6 +24,7 @@
 .footer__social {
     position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: map-get(v.$indents, small);
 
@@ -48,6 +49,7 @@
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         flex-direction: column;
+        justify-content: flex-start;
         align-items: start;
     }
 }
