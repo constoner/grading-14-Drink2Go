@@ -22,8 +22,8 @@
   <header class="header header--nojs page-wrapper">
     <a class="header__link logo" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
       <picture>
-        <source media="(min-width: 1240px)" srcset="./img/logo_large.svg">
-        <source media="(min-width: 700px)" srcset="./img/logo_medium.svg">
+        <source media="(min-width: 1400px)" srcset="./img/logo_large.svg">
+        <source media="(min-width: 750px)" srcset="./img/logo_medium.svg">
         <img class="logo__image" src="./img/logo_small.svg" width="32" height="36" alt="Логотип Drink2Go.">
       </picture>
       <span class="logo__text">Интернет-магазин кофейных напитков</span>
@@ -98,8 +98,8 @@
         <div class="swiper__wrapper swiper-wrapper">
           <div class="swiper__slide swiper-slide slide slide--flat">
             <picture>
-              <source media="(min-width: 1240px)" srcset="./img/swiper/flat-white-large.png, ./img/swiper/flat-white-large@2x.png 2x"> 
-              <source media="(min-width: 700px)" srcset="./img/swiper/flat-white-medium.png, ./img/swiper/flat-white-medium@2x.png 2x"> 
+              <source media="(min-width: 1400px)" srcset="./img/swiper/flat-white-large.png, ./img/swiper/flat-white-large@2x.png 2x"> 
+              <source media="(min-width: 750px)" srcset="./img/swiper/flat-white-medium.png, ./img/swiper/flat-white-medium@2x.png 2x"> 
               <img class="slide__image" src="./img/swiper/flat-white-small.png" srcset="./img/swiper/flat-white-small@2x.png 2x" width="280" height="280" alt="Изобржение товара 1.">
             </picture>
             <div class="slide__wrapper">
@@ -115,8 +115,8 @@
           </div>
           <div class="swiper__slide swiper-slide slide slide--lavender">
             <picture>
-              <source media="(min-width: 1240px)" srcset="./img/swiper/lavender-large.png, ./img/swiper/lavender-large@2x.png 2x"> 
-              <source media="(min-width: 700px)" srcset="./img/swiper/lavender-medium.png, ./img/swiper/lavender-medium@2x.png 2x"> 
+              <source media="(min-width: 1400px)" srcset="./img/swiper/lavender-large.png, ./img/swiper/lavender-large@2x.png 2x"> 
+              <source media="(min-width: 750px)" srcset="./img/swiper/lavender-medium.png, ./img/swiper/lavender-medium@2x.png 2x"> 
               <img class="slide__image" src="./img/swiper/lavender-small.png" srcset="./img/swiper/lavender-small@2x.png 2x" width="280" height="280" alt="Изобржение товара 1.">
             </picture>
             <div class="slide__wrapper">
@@ -132,8 +132,8 @@
           </div>
           <div class="swiper__slide swiper-slide slide slide--espresso">
             <picture>
-              <source media="(min-width: 1240px)" srcset="./img/swiper/espresso-large.png, ./img/swiper/espresso-large@2x.png 2x"> 
-              <source media="(min-width: 700px)" srcset="./img/swiper/espresso-medium.png, ./img/swiper/espresso-medium@2x.png 2x"> 
+              <source media="(min-width: 1400px)" srcset="./img/swiper/espresso-large.png, ./img/swiper/espresso-large@2x.png 2x"> 
+              <source media="(min-width: 750px)" srcset="./img/swiper/espresso-medium.png, ./img/swiper/espresso-medium@2x.png 2x"> 
               <img class="slide__image" src="./img/swiper/espresso-small.png" srcset="./img/swiper/espresso-small@2x.png 2x" width="280" height="280" alt="Изобржение товара 1.">
             </picture>
             <div class="slide__wrapper">
@@ -208,9 +208,11 @@
               <legend class="form__legend">Цена</legend>
               <div class="form__slider slider" id="slider"></div>
               <div class="form__input-container">
-                <input class="form__input input-number form__input--min" type="number" name="min-price" min="0" max="999" placeholder="0">
+                <label class="visually-hidden" for="min-price">Минимальная цена.</label>
+                <input class="form__input input-number form__input--min" type="number" id="min-price" name="min-price" min="0" max="999" placeholder="0">
                 <span class="form__divider"></span>
-                <input class="form__input input-number form__input--max" type="number" name="max-price" min="1" max="1000" placeholder="1000" value="900">
+                <label class="visually-hidden" for="max-price">Максимальная цена.</label>
+                <input class="form__input input-number form__input--max" type="number" id="max-price" name="max-price" min="1" max="1000" placeholder="1000" value="900">
               </div>
             </fieldset>
   
@@ -417,14 +419,14 @@
       <h2 class="visually-hidden">Мы на карте.</h2>
       <!-- fallback map -->
       <picture>
-        <source media="(min-width: 1240px)" srcset="./img/fallback-map-large.png">
-        <source media="(min-width: 700px)" srcset="./img/fallback-map-medium.png">
+        <source media="(min-width: 1400px)" srcset="./img/fallback-map-large.png">
+        <source media="(min-width: 750px)" srcset="./img/fallback-map-medium.png">
         <img
           class="map__image"
           src="./img/fallback-map-small.png"
           sizes="(min-width: 320px) 320px,
-          (min-width: 700px) 768px,
-          (min-width: 1240px) 1440px"
+          (min-width: 750px) 768px,
+          (min-width: 1400px) 1440px"
           alt="Карта города."
           loading="lazy"
         >
@@ -440,7 +442,7 @@
       <div class="footer__social">
         <a class="footer__link logo logo--bigger" href="./index.html" aria-label="Интернет-магазин кофейных напитков.">
           <picture>
-            <source media="(min-width: 700px)" srcset="./img/logo_large.svg">
+            <source media="(min-width: 750px)" srcset="./img/logo_large.svg">
             <img class="logo__image logo__image--bigger" src="./img/logo_medium.svg" width="82" height="36" alt="Логотип Drink2Go.">
           </picture>
           <span class="logo__text logo__text--bigger">Интернет-магазин кофейных напитков</span>
@@ -548,7 +550,7 @@
         </div>
       </nav>
     </div>
-    <p class="credit">
+    <p class="footer__credit credit">
       Разработано в 
       <a
         class="credit__link"
