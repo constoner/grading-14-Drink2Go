@@ -10,7 +10,7 @@
     }    
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        padding: 50px map-get(v.$indents, large) 44px;
+        padding: 101px map-get(v.$indents, large) 120px;
     }
 }
 
@@ -20,11 +20,13 @@
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         flex-direction: row;
+        justify-content: end;
     }
 }
 
 .catalog__products-wrapper {
     @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-shrink: 0;
         margin-left: 30px;
     }
 }
@@ -35,11 +37,20 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         margin-bottom: 40px;
     }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-grow: 1;
+        margin-bottom: 40px;
+    }
 }
 
 .catalog__title {
     margin: 0;
     margin-bottom: 20px;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-bottom: 40px;
+    }
 }
 
 .catalog__select {
@@ -47,6 +58,10 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         margin-bottom: 26px;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-top: -4px;
     }
 }
 
@@ -64,6 +79,7 @@
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
+        width: 1011px;
         grid-template-columns: repeat(3, 1fr);
         gap: map-get(v.$indents, medium);
     }
@@ -76,5 +92,10 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         margin-top: 70px;
     }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-top: 60px;
+    }
+
 }
 

@@ -50,13 +50,14 @@
     @media (min-width: map-get(v.$breakpoints, large)) {
         align-items: start;
         order: 0;
+        margin-top: -8px;
     }
 }
 
 
 .slide__image {
     margin-bottom: 9px;
-    object-fit: cover;
+    object-fit: contain;
     width: auto;
     max-height: 100%;
 
@@ -71,7 +72,7 @@
         width: 600px;
         height: 600px;
         margin-top: 0;
-        margin-left: map-get(v.$indents, medium);
+        margin-left: 25px;
     }
 }
 
@@ -109,6 +110,7 @@
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-bottom: 40px;
         text-align: left;
     }
 }

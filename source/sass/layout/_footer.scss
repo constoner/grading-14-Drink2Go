@@ -16,6 +16,7 @@
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         flex-direction: row;
+        padding: 0 20px;
         padding-top: 20px;
     }
 }
@@ -67,6 +68,10 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         flex-direction: row;
         padding: 0 map-get(v.$indents, small);
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        padding: 10px;
     }
 }
 

@@ -4,7 +4,6 @@
 .credit {
     width: fit-content;
     margin: 0 auto;
-    padding-top: map-get(v.$indents, small);
     padding-bottom: map-get(v.$indents, medium);
     font-size: map-get(v.$font-size, small);
     line-height: map-get(v.$line-height, small);

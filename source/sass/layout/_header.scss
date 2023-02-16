@@ -34,6 +34,10 @@
 .header__link {
     flex-shrink: 0;
     margin-right: auto;
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin: 0;
+    }
 }
 
 .header__button {
@@ -45,5 +49,24 @@
 
     &--nojs {
         display: none;
+    }
+}
+
+.header__menu-site {
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin: 0 auto;
+    }
+}
+
+.header__menu-user {
+    margin-left: auto;
+
+    @media (min-width: map-get(v.$breakpoints, medium)) {
+        order: 1;
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        flex-shrink: 0;
+        margin: 0;
     }
 }

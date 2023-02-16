@@ -9,7 +9,7 @@
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        padding: 100px map-get(v.$indents, large) 120px;
+        padding: 101px map-get(v.$indents, large) 120px;
     }
 }
 

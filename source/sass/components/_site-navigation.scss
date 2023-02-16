@@ -33,6 +33,10 @@
     &--opened {
         transform: scaleY(1);
     }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        margin-left: -52px;
+    }
 }
 
 .site-navigation__item {
@@ -41,6 +45,12 @@
         
         &:first-child {
             border-top: 1px solid c.$base-secondary;
+        }
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        &:not(:first-child) {
+            margin-left: 20px;
         }
     }
 }
