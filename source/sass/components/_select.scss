@@ -40,6 +40,7 @@
     cursor: pointer;
 
     @media (min-width: map-get(v.$breakpoints, large)) {
+
         &:hover,
         &:focus {
             background-color: c.$base-secondary;

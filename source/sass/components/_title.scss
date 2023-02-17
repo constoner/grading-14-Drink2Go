@@ -17,12 +17,12 @@
 .title--big {
     font-size: map-get(v.$font-size, h1-small);
     line-height: map-get(v.$line-height, h1-small);
-    
+
     @media (min-width: map-get(v.$breakpoints, medium)) {
         font-size: map-get(v.$font-size, h1-medium);
         line-height: map-get(v.$line-height, h1-medium);
     }
-    
+
     @media (min-width: map-get(v.$breakpoints, large)) {
         font-size: map-get(v.$font-size, h1-large);
         line-height: map-get(v.$line-height, h1-large);

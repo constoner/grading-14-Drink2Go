@@ -9,12 +9,12 @@
     height: 100%;
     padding: map-get(v.$indents, small);
     background-color: c.$light-grey;
-    
+
     @media (min-width: map-get(v.$breakpoints, medium)) {
         height: 640px;
         padding: 59px 80px;
     }
-    
+
     @media (min-width: map-get(v.$breakpoints, large)) {
         grid-template-columns: 1fr 1fr;
         gap: map-get(v.$indents, medium);
@@ -46,7 +46,7 @@
     @media (min-width: map-get(v.$breakpoints, medium)) {
         order: -1;
     }
-    
+
     @media (min-width: map-get(v.$breakpoints, large)) {
         align-items: start;
         order: 0;
@@ -78,7 +78,7 @@
 
 .slide__tag {
     margin-bottom: 5px;
-    
+
     @media (min-width: map-get(v.$breakpoints, large)) {
         text-align: left;
     }

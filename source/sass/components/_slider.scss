@@ -66,28 +66,28 @@
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        
-            &:hover::before,
-            &:focus::before {
-                background-color: c.$primary-opacity;
-            }
-        
-            &:focus {
-                outline: 2px solid c.$base-primary; 
-            }
+
+        &:hover::before,
+        &:focus::before {
+            background-color: c.$primary-opacity;
         }
-        
-        &:active {
-            border-color: c.$base-primary;
-        }
-    
-        &:active::before {
-            background-color: c.$base-primary;
-        }
-        
-        &:focus-visible {
+
+        &:focus {
             outline: 2px solid c.$base-primary;
         }
+    }
+
+    &:active {
+        border-color: c.$base-primary;
+    }
+
+    &:active::before {
+        background-color: c.$base-primary;
+    }
+
+    &:focus-visible {
+        outline: 2px solid c.$base-primary;
+    }
 }
 
 

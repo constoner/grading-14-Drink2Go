@@ -13,11 +13,11 @@
   @media (min-width: map-get(v.$breakpoints, large)) {
     height: 714px;
     overflow: hidden;
-  }    
+  }
 }
 
 .swiper__slide {
-  width: 100%;    
+  width: 100%;
 }
 
 .swiper__button {
@@ -39,7 +39,7 @@
   }
 }
 
-.swiper__button::before {    
+.swiper__button::before {
   @media (min-width: map-get(v.$breakpoints, large)) {
     position: absolute;
     display: block;
@@ -53,29 +53,30 @@
 }
 
 .swiper__button:hover::before,
-.swiper__button:focus-visible::before {    
+.swiper__button:focus-visible::before {
   @media (min-width: map-get(v.$breakpoints, large)) {
     opacity: 1;
   }
 }
 
 
-.swiper__button:active {    
+.swiper__button:active {
   @media (min-width: map-get(v.$breakpoints, large)) {
-    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);    }
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
 }
 
-.swiper__button:active::before {    
+.swiper__button:active::before {
   @media (min-width: map-get(v.$breakpoints, large)) {
     display: none;
   }
 }
-  
-  
+
+
 .swiper__button:focus-visible {
   outline: 2px solid c.$base-primary;
 }
-  
+
 .swiper__button[disabled] {
   color: c.$base-grey;
   cursor: default;
@@ -105,7 +106,7 @@
   }
 
   @media (min-width: map-get(v.$breakpoints, large)) {
-    right: 0;    
+    right: 0;
   }
 }
 
@@ -119,12 +120,12 @@
 }
 
 .swiper__pagination {
-display: none;
+  display: none;
 
-@media (min-width: map-get(v.$breakpoints, large)) {
-  display: block;
-  bottom: 64px !important; // перебиваю стандартную стилизацию SwiperJS
-}
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    display: block;
+    bottom: 64px !important; // перебиваю стандартную стилизацию SwiperJS
+  }
 }
 
 .swiper__pagination span {
@@ -148,11 +149,10 @@ display: none;
   }
 
   &:focus-visible {
-  outline: 2px solid c.$base-primary;
+    outline: 2px solid c.$base-primary;
   }
 }
-  
+
 .swiper__pagination span[aria-current="true"] {
   background-image: linear-gradient(c.$base-primary, c.$base-primary);
 }
-  

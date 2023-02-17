@@ -10,7 +10,7 @@
 }
 
 .user-navigation__item {
-    
+
     @media (min-width: map-get(v.$breakpoints, large)) {
         flex-shrink: 0;
 
@@ -27,7 +27,7 @@
     width: 60px;
     height: 60px;
     transition: color 0.2s ease-out;
-    
+
     &:active {
         background-color: c.$base-secondary;
     }
@@ -39,7 +39,7 @@
     @media (min-width: map-get(v.$breakpoints, large)) {
         width: auto;
         padding: 0 map-get(v.$indents, small);
-                
+
         &:hover,
         &:focus {
             color: c.$base-primary

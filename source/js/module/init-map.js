@@ -1,4 +1,4 @@
-// 
+//
 //Модуль настройки и подключения карты Leaflet
 //
 
@@ -27,7 +27,7 @@ const mapOptions = {
 
 
 const enableMapZoom = (evt) => {
-    
+
     if (evt.shiftKey === true) {
         map.scrollWheelZoom.enable();
     }
@@ -36,10 +36,10 @@ const enableMapZoom = (evt) => {
 
 const initMap = () => {
     const map = L.map('map', mapOptions);
-    
+
     window.addEventListener('keydown', (evt) => enableMapZoom(evt));
     window.addEventListener('keyup', () => map.scrollWheelZoom.disable());
-    
+
     L.tileLayer('https://api.maptiler.com/maps/openstreetmap/256/{z}/{x}/{y}@2x.jpg?key=oJPXf6zaBAZnjnBlkWnf').addTo(map);
     L.marker(shopPlace, markerOptions).addTo(map);
 }

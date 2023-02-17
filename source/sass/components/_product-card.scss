@@ -33,6 +33,7 @@
 
 
     @media (min-width: map-get(v.$breakpoints, large)) {
+
         &:hover::before,
         &:focus::before {
             opacity: 1;
@@ -71,7 +72,7 @@
 }
 
 @media (min-width: map-get(v.$breakpoints, large)) {
-    
+
     .product-card__link:hover .product-card__title {
         color: c.$base-primary;
     }

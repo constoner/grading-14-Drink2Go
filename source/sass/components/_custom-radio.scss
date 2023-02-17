@@ -10,7 +10,7 @@
     border-radius: 50%;
     transition: all 0.2s ease-out;
     cursor: pointer;
-    
+
     &::after {
         position: absolute;
         top: 50%;
@@ -30,14 +30,14 @@
 
 // стили для ховера и фокуса
 @media (min-width: map-get(v.$breakpoints, large)) {
-    
-    .custom-radio__input:hover + .custom-radio__button,
-    .custom-radio__input:focus-visible + .custom-radio__button {
+
+    .custom-radio__input:hover+.custom-radio__button,
+    .custom-radio__input:focus-visible+.custom-radio__button {
         border-color: c.$primary-lighter;
     }
-    
-    .custom-radio__input:hover + .custom-radio__button::after,
-    .custom-radio__input:focus-visible + .custom-radio__button::after {
+
+    .custom-radio__input:hover+.custom-radio__button::after,
+    .custom-radio__input:focus-visible+.custom-radio__button::after {
         background-color: c.$primary-opacity;
         opacity: 1;
         transform: scale(1) translate(-50%, -50%);
@@ -47,11 +47,11 @@
 }
 
 // стили для выбранной кнопки
-.custom-radio__input:checked + .custom-radio__button {
+.custom-radio__input:checked+.custom-radio__button {
     border-color: c.$base-primary;
 }
 
-.custom-radio__input:checked + .custom-radio__button::after {
+.custom-radio__input:checked+.custom-radio__button::after {
     background-color: c.$base-primary;
     opacity: 1;
     transform: scale(1) translate(-50%, -50%);
@@ -67,16 +67,16 @@
 }
 
 // стили для отключенной кнопки
-.custom-radio__input:disabled + .custom-radio__button {
+.custom-radio__input:disabled+.custom-radio__button {
     border: 2px solid c.$light-grey;
     cursor: default;
 }
 
-.custom-radio__input:disabled + .custom-radio__button::after {
+.custom-radio__input:disabled+.custom-radio__button::after {
     background-color: c.$light-grey;
 }
 
-.custom-radio__input:disabled + .custom-radio__button + .custom-radio__label {
+.custom-radio__input:disabled+.custom-radio__button+.custom-radio__label {
     color: c.$base-grey;
     cursor: default;
 }

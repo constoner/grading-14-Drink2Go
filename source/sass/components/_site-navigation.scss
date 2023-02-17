@@ -14,7 +14,7 @@
     transform: scaleY(0);
     will-change: transform;
     transition: all 0.2s ease-out;
-    
+
     @media (min-width: map-get(v.$breakpoints, medium)) {
         position: static;
         display: flex;
@@ -27,13 +27,13 @@
         position: static;
         width: calc(100vw - 40px);
         transform: scaleY(1);
-        
+
         @media (min-width: map-get(v.$breakpoints, medium)) {
             width: fit-content;
         }
-        
+
     }
-    
+
     &--opened {
         transform: scaleY(1);
     }
@@ -46,7 +46,7 @@
 .site-navigation__item {
     @media (max-width: map-get(v.$breakpoints, medium)) {
         border-bottom: 1px solid c.$base-secondary;
-        
+
         &:first-child {
             border-top: 1px solid c.$base-secondary;
         }
@@ -79,7 +79,7 @@
             color: c.$base-primary;
         }
     }
-    
+
     @media (min-width: map-get(v.$breakpoints, medium)) {
         position: relative;
         height: 80px;
@@ -102,7 +102,7 @@
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        
+
         &:hover,
         &:focus {
             color: c.$base-primary;

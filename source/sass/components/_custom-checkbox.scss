@@ -11,7 +11,7 @@
     border-radius: 12px;
     transition: all 0.2s ease-out;
     cursor: pointer;
-    
+
     &::after {
         position: absolute;
         top: 50%;
@@ -30,21 +30,21 @@
 
 // стили для ховера и фокуса
 @media (min-width: map-get(v.$breakpoints, large)) {
-    
-    .custom-checkbox__input:hover + .custom-checkbox__button,
-    .custom-checkbox__input:focus-visible + .custom-checkbox__button {
+
+    .custom-checkbox__input:hover+.custom-checkbox__button,
+    .custom-checkbox__input:focus-visible+.custom-checkbox__button {
         background-color: c.$primary-opacity;
         border-color: c.$primary-lighter;
     }
 }
 
 // стили для выбранной кнопки
-.custom-checkbox__input:checked + .custom-checkbox__button {
+.custom-checkbox__input:checked+.custom-checkbox__button {
     border-color: c.$base-primary;
     background-color: c.$base-primary;
 }
 
-.custom-checkbox__input:checked + .custom-checkbox__button::after {
+.custom-checkbox__input:checked+.custom-checkbox__button::after {
     transform: translate(-1px, -50%);
     transform-origin: 0, 0;
     transition-delay: 0.1s;
@@ -58,21 +58,21 @@
 }
 
 // стили для отключенной кнопки
-.custom-checkbox__input:disabled + .custom-checkbox__button {
+.custom-checkbox__input:disabled+.custom-checkbox__button {
     background-color: c.$light-grey;
     border: 2px solid c.$light-grey;
     cursor: default;
 }
 
-.custom-checkbox__input:disabled + .custom-checkbox__button::after {
-    background-color: c.$lightest-grey;    
+.custom-checkbox__input:disabled+.custom-checkbox__button::after {
+    background-color: c.$lightest-grey;
 }
 
-.custom-checkbox__input:disabled:checked + .custom-checkbox__button::after {
-    background-color: c.$base-grey;    
+.custom-checkbox__input:disabled:checked+.custom-checkbox__button::after {
+    background-color: c.$base-grey;
 }
 
-.custom-checkbox__input:disabled + .custom-checkbox__button + .custom-checkbox__label {
+.custom-checkbox__input:disabled+.custom-checkbox__button+.custom-checkbox__label {
     color: c.$base-grey;
     cursor: default;
 }

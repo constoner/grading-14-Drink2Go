@@ -74,7 +74,7 @@
   &::before {
     transform: rotate(45deg);
   }
-  
+
   &::after {
     transform: rotate(-45deg);
   }
@@ -87,7 +87,7 @@
   }
 
   & .menu-button__X {
-    transform: translate(-50%, -50%)  scaleY(1);
+    transform: translate(-50%, -50%) scaleY(1);
     transition: transform 0.1s ease-out;
     transition-delay: 0.1s;
   }

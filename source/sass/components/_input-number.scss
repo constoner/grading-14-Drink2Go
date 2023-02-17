@@ -18,8 +18,8 @@
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-      appearance: none;
-      margin: 0;
+        appearance: none;
+        margin: 0;
     }
 
     &::placeholder {
@@ -37,10 +37,10 @@
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        
-            &:hover {
-                border: 2px solid c.$primary-darker;
-            }
+
+        &:hover {
+            border: 2px solid c.$primary-darker;
+        }
     }
 
     &:focus,

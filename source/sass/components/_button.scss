@@ -16,7 +16,7 @@
     background-color: c.$base-primary;
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        
+
         &:hover,
         &:focus {
             background-color: c.$primary-lighter;
@@ -36,8 +36,9 @@
 .button--add {
     color: c.$base-primary;
     background-color: c.$base-white;
-    
+
     @media (min-width: map-get(v.$breakpoints, large)) {
+
         &:hover,
         &:focus {
             color: c.$base-white;

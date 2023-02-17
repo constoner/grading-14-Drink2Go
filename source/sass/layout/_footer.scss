@@ -37,8 +37,8 @@
         height: 1px;
         background-color: c.$base-secondary;
         content: "";
-    }    
-    
+    }
+
     @media (min-width: map-get(v.$breakpoints, medium)) {
         padding-bottom: map-get(v.$indents, medium);
 
@@ -83,7 +83,7 @@
     padding: map-get(v.$indents, small);
     padding-top: map-get(v.$indents, small);
     padding-bottom: 0;
-    
+
     &::after {
         position: absolute;
         left: 0;
@@ -93,7 +93,7 @@
         height: 1px;
         background-color: c.$base-secondary;
         content: "";
-    } 
+    }
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         width: 223px;
@@ -103,7 +103,7 @@
         &:not(:first-child) {
             margin-left: 30px;
         }
-        
+
         &::after {
             display: none;
         }
@@ -130,5 +130,5 @@
 }
 
 .footer__address {
-    margin-bottom: map-get(v.$indents,small);
+    margin-bottom: map-get(v.$indents, small);
 }

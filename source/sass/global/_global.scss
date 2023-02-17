@@ -27,7 +27,9 @@ img {
     }
 }
 
-a, select, button {
+a,
+select,
+button {
     color: c.$base-black;
     text-decoration: none;
 
@@ -53,4 +55,4 @@ a, select, button {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}

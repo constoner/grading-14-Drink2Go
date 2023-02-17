@@ -3,11 +3,11 @@
 
 .catalog {
     padding: 50px map-get(v.$indents, small) 44px;
-    background-color: c.$lightest-grey;    
+    background-color: c.$lightest-grey;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         padding: 81px map-get(v.$indents, small) 90px;
-    }    
+    }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         padding: 101px map-get(v.$indents, large) 120px;
@@ -98,4 +98,3 @@
     }
 
 }
-

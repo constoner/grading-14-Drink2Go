@@ -30,13 +30,13 @@
     @media (min-width: map-get(v.$breakpoints, large)) {
         width: 170px;
     }
-    
+
     &--bigger {
         width: 82px;
-    
+
         @media (min-width: map-get(v.$breakpoints, medium)) {
             width: 170px;
-        }    
+        }
     }
 }
 
