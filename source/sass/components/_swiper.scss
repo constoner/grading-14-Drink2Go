@@ -7,10 +7,12 @@
 
   @media (min-width: map-get(v.$breakpoints, medium)) {
     height: 828px;
+    overflow: visible;
   }
 
   @media (min-width: map-get(v.$breakpoints, large)) {
     height: 714px;
+    overflow: hidden;
   }    
 }
 
@@ -27,8 +29,7 @@
   background: none;
 
   @media (min-width: map-get(v.$breakpoints, medium)) {
-    top: calc(50% - 104px);
-    height: 20px;
+    top: -94px;
   }
 
   @media (min-width: map-get(v.$breakpoints, large)) {
@@ -129,15 +130,21 @@ display: none;
 .swiper__pagination span {
   width: 62px;
   height: 4px;
-  background-color: c.$base-white;
+  margin-bottom: -12px !important; // перебиваю библиотечные стили. марджины и падинеги нужны для увеличения кликабельной области
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: transparent;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 62px 4px;
   opacity: 1;
   border: none;
   border-radius: 0;
-  transition: background-color 0.2s ease-out;
 
   &:hover,
   &:focus {
-    background-color: c.$primary-opacity;
+    background-image: linear-gradient(c.$primary-opacity, c.$primary-opacity);
   }
 
   &:focus-visible {
@@ -146,6 +153,6 @@ display: none;
 }
   
 .swiper__pagination span[aria-current="true"] {
-  background-color: c.$base-primary;
+  background-image: linear-gradient(c.$base-primary, c.$base-primary);
 }
   
