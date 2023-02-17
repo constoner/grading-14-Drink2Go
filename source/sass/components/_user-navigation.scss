@@ -34,16 +34,16 @@
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
         height: 80px;
-
-        &:hover,
-        &:focus {
-            color: c.$base-primary
-        }
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
         width: auto;
         padding: 0 map-get(v.$indents, small);
+                
+        &:hover,
+        &:focus {
+            color: c.$base-primary
+        }
     }
 }
 

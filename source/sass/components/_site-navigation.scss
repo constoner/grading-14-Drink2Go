@@ -86,11 +86,6 @@
         letter-spacing: 0.02em;
         transition: color 0.2s ease-out;
 
-        &:hover,
-        &:focus {
-            color: c.$base-primary;
-        }
-
         &[aria-current="page"] {
             color: c.$base-primary;
         }
@@ -103,6 +98,14 @@
             height: 2px;
             background-color: c.$base-primary;
             content: "";
+        }
+    }
+
+    @media (min-width: map-get(v.$breakpoints, large)) {
+        
+        &:hover,
+        &:focus {
+            color: c.$base-primary;
         }
     }
 }

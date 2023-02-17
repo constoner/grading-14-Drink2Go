@@ -20,14 +20,14 @@
     letter-spacing: 0.02em;
     transition: color 0.2s ease-out;
     
-    @media (min-width: map-get(v.$breakpoints, medium)) {
+    @media (min-width: map-get(v.$breakpoints, large)) {
         &:hover,
         &:focus {
             color: c.$primary-lighter;
         }
     }
-    
-        &:active {
-            color: c.$primary-darker;
-        }
+
+    &:active {
+        color: c.$primary-darker;
+    }
 }

@@ -22,17 +22,17 @@
 .credit__link {
     color: inherit;
     transition: color 0.2s ease-out;
-
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        &:hover,
-        &:focus {
-            color: c.$base-primary;
-        }
-    }
     
     &:active {
         color: c.$primary-darker;
     }
+    
+        @media (min-width: map-get(v.$breakpoints, large)) {
+            &:hover,
+            &:focus {
+                color: c.$base-primary;
+            }
+        }
 }
 
 .credit__icon {
