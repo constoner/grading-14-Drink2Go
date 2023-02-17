@@ -38,6 +38,29 @@
       </picture>
       <span class="logo__text">Интернет-магазин кофейных напитков</span>
     </a>
+    <!-- .site-navigation--nojs возвращает в поток меню -->
+    <!-- .site-navigation--opened открывает мобильное меню при клике на кнопку -->
+    <nav class="header__menu-site site-navigation">
+      <!-- .menu-button--opened переключает вид бургер кнопки при открытии меню -->
+      <button class="header__button header__button--nojs menu-button" type="button" aria-label="Меню.">
+        <span class="menu-button__E"></span>
+        <span class="menu-button__X"></span>
+      </button>
+      <ul class="site-navigation__list site-navigation__list--nojs" role="menubar">
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./index.html" aria-current="page">Главная</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="#catalog">Каталог</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./delivery.html">Доставка</a>
+        </li>
+        <li class="site-navigation__item">
+          <a class="site-navigation__link" href="./about.html">О нас</a>
+        </li>
+      </ul>
+    </nav>
     <nav class="header__menu-user user-navigation">
       <ul class="user-navigation__list">
         <li class="user-navigation__item">
@@ -61,29 +84,6 @@
               Корзина
             </span>
           </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- .site-navigation--nojs возвращает в поток меню -->
-    <!-- .site-navigation--opened открывает мобильное меню при клике на кнопку -->
-    <nav class="header__menu-site site-navigation">
-      <!-- .menu-button--opened переключает вид бургер кнопки при открытии меню -->
-      <button class="header__button header__button--nojs menu-button" type="button" aria-label="Меню.">
-        <span class="menu-button__E"></span>
-        <span class="menu-button__X"></span>
-      </button>
-      <ul class="site-navigation__list site-navigation__list--nojs" role="menubar">
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="./index.html" aria-current="page">Главная</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#catalog">Каталог</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="./delivery.html">Доставка</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="./about.html">О нас</a>
         </li>
       </ul>
     </nav>
