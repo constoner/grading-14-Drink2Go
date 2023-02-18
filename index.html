@@ -97,6 +97,7 @@
       <div class="hero__swiper swiper">
         <div class="swiper__wrapper swiper-wrapper">
           <div class="swiper__slide swiper-slide slide slide--flat">
+            <div class="slide__background"></div>
             <picture>
               <source type="image/webp" media="(min-width: 1400px)"
                 srcset="./img/swiper/flat-white-large.webp, ./img/swiper/flat-white-large@2x.webp 2x">
@@ -124,6 +125,7 @@
             </div>
           </div>
           <div class="swiper__slide swiper-slide slide slide--lavender">
+            <div class="slide__background"></div>
             <picture>
               <source type="image/webp" media="(min-width: 1400px)"
                 srcset="./img/swiper/lavender-large.webp, ./img/swiper/lavender-large@2x.webp 2x">
@@ -151,6 +153,7 @@
             </div>
           </div>
           <div class="swiper__slide swiper-slide slide slide--espresso">
+            <div class="slide__background"></div>
             <picture>
               <source type="image/webp" media="(min-width: 1400px)"
                 srcset="./img/swiper/espresso-large.webp, ./img/swiper/espresso-large@2x.webp 2x">
@@ -301,13 +304,15 @@
         <a name="catalog"></a>
         <div class="catalog__products-wrapper">
           <div class="catalog__select select">
-            <label class="select__label" for="catalog-sort">Сортировка:</label>
-            <select class="select__input" name="catalog-sort" id="catalog-sort">
-              <option value="default" selected>по умолчанию&nbsp; </option>
-              <option value="expoensive">сначала дорогие&nbsp; </option>
-              <option value="cheap">сначала дешёвые&nbsp; </option>
-              <option value="rank">высокий рейтинг&nbsp; </option>
-            </select>
+            <label class="select__label" for="catalog-sort">Сортировка:
+              <select class="select__input" name="catalog-sort" id="catalog-sort">
+                <option value="default" selected>по умолчанию&nbsp; </option>
+                <option value="expoensive">сначала дорогие&nbsp; </option>
+                <option value="cheap">сначала дешёвые&nbsp; </option>
+                <option value="rank">высокий рейтинг&nbsp; </option>
+              </select>
+              <div class="select__arrow"></div>
+            </label>
           </div>
 
           <ul class="catalog__list">
