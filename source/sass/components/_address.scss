@@ -2,42 +2,42 @@
 @use "./../global/colors" as c;
 
 .address {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .address__text {
-    position: relative;
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: -2px;
+  padding-left: 19px;
+  font-style: normal;
+
+  &::before {
+    position: absolute;
+    left: 0;
     display: block;
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: -2px;
-    padding-left: 19px;
-    font-style: normal;
+    width: 13px;
+    height: 16px;
+    color: c.$base-primary;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
 
+  &--address {
     &::before {
-        position: absolute;
-        left: 0;
-        display: block;
-        width: 13px;
-        height: 16px;
-        color: c.$base-primary;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        content: ""
+      top: 4px;
+      background-image: url("./../../img/icons/stack.svg#address");
     }
+  }
 
-    &--address {
-        &::before {
-            top: 4px;
-            background-image: url("./../../img/icons/stack.svg#address");
-        }
+  &--phone {
+    &::before {
+      top: 1px;
+      background-image: url("./../../img/icons/stack.svg#phone");
     }
-
-    &--phone {
-        &::before {
-            top: 1px;
-            background-image: url("./../../img/icons/stack.svg#phone");
-        }
-    }
+  }
 }

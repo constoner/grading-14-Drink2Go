@@ -2,170 +2,169 @@
 @use "./../global/colors" as c;
 
 .form__wrapper {
-    display: grid;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 23px;
+  padding-bottom: 13px;
+
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    grid-template-columns: 30% 30% 1fr;
+    gap: map-get(v.$indents, medium);
+  }
+
+  @media (min-width: map-get(v.$breakpoints, large)) {
     grid-template-columns: 1fr;
-    gap: 23px;
-    padding-bottom: 13px;
-
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        grid-template-columns: 30% 30% 1fr;
-        gap: map-get(v.$indents, medium);
-    }
-
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
+    gap: 24px;
+  }
 }
 
 .form__slider {
-    margin-top: 10px;
-    margin-bottom: 37px;
+  margin-top: 10px;
+  margin-bottom: 37px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-left: 4px;
-        margin-right: 4px;
-        margin-bottom: 34px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 34px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-right: -9px;
-        margin-left: -2px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-right: -9px;
+    margin-left: -2px;
+  }
 }
 
 .form__input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        justify-content: flex-start;
-        margin-left: 6px;
-        padding-right: 10px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    justify-content: flex-start;
+    margin-left: 6px;
+    padding-right: 10px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-left: 0;
-        margin-right: -9px;
-        margin-bottom: 8px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-left: 0;
+    margin-right: -9px;
+    margin-bottom: 8px;
+  }
 }
 
 .form__divider {
-    flex-grow: 1;
-    display: inline-block;
-    width: 8px;
-    height: 2px;
-    margin: 0 18px;
-    background-color: c.$base-grey;
-    vertical-align: middle;
+  flex-grow: 1;
+  display: inline-block;
+  width: 8px;
+  height: 2px;
+  margin: 0 18px;
+  background-color: c.$base-grey;
+  vertical-align: middle;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        width: 7px;
-        margin: 0 14px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    width: 7px;
+    margin: 0 14px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        flex-grow: 0;
-        width: 10px;
-        margin: 0 20px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    flex-grow: 0;
+    width: 10px;
+    margin: 0 20px;
+  }
 }
 
 .form__input {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .form__fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .form__legend {
-    margin-bottom: 23px;
-    padding: 0;
-    font-size: map-get(v.$font-size, medium);
-    line-height: map-get(v.$line-height, medium);
-    font-weight: 600;
+  margin-bottom: 23px;
+  padding: 0;
+  font-size: map-get(v.$font-size, medium);
+  line-height: map-get(v.$line-height, medium);
+  font-weight: 600;
 
-    &--mod {
-        margin-bottom: 22px;
-    }
+  &--mod {
+    margin-bottom: 22px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 20px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__label {
-    display: flex;
-    align-items: center;
-    width: fit-content;
+  display: flex;
+  align-items: center;
+  width: fit-content;
 
-    &:not(:last-child) {
-        margin-bottom: 21px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 21px;
+  }
 }
 
-.form__legend--mod+.form__label {
-
-    &:not(:last-child) {
-        margin-bottom: 19px;
-    }
+.form__legend--mod + .form__label {
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
 }
 
 .form__button-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 135px;
+  padding-top: 20px;
+
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 25px;
+    padding-right: 56px;
+  }
+
+  @media (min-width: map-get(v.$breakpoints, large)) {
     justify-content: space-between;
-    align-items: center;
-    height: 135px;
-    padding-top: 20px;
-
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        flex-direction: row;
-        justify-content: center;
-        margin: 0 auto;
-        height: auto;
-        padding-top: 25px;
-        padding-right: 56px;
-    }
-
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        justify-content: space-between;
-        width: 310px;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        padding-top: 26px;
-    }
+    width: 310px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    padding-top: 26px;
+  }
 }
 
 .form__button {
-    width: fit-content;
-    min-width: 160px;
-    min-height: 45px;
-    font-size: map-get(v.$font-size, main);
-    line-height: map-get(v.$line-height, medium);
-    text-align: center;
-    vertical-align: middle;
+  width: fit-content;
+  min-width: 160px;
+  min-height: 45px;
+  font-size: map-get(v.$font-size, main);
+  line-height: map-get(v.$line-height, medium);
+  text-align: center;
+  vertical-align: middle;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        min-width: fit-content;
-        min-height: 40px;
-        padding: 4px !important; // перебиваю класс .button, поскольку это единственная кнопка с такими падингами (только изза PixelPerfect)
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    min-width: fit-content;
+    min-height: 40px;
+    padding: 4px !important; // перебиваю класс .button, поскольку это единственная кнопка с такими падингами (только изза PixelPerfect)
 
-        &:not(:first-child) {
-            margin-left: 30px;
-        }
+    &:not(:first-child) {
+      margin-left: 30px;
     }
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        &:not(:first-child) {
-            margin-left: 18px;
-        }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:not(:first-child) {
+      margin-left: 18px;
     }
+  }
 }

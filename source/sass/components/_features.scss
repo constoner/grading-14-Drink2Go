@@ -2,129 +2,129 @@
 @use "./../global/colors" as c;
 
 .features {
-    padding: 50px map-get(v.$indents, small) 62px;
+  padding: 50px map-get(v.$indents, small) 62px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        padding: 60px map-get(v.$indents, medium) 100px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    padding: 60px map-get(v.$indents, medium) 100px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        padding: 101px map-get(v.$indents, large) 120px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    padding: 101px map-get(v.$indents, large) 120px;
+  }
 }
 
 .features__title {
-    margin: 0;
-    margin-bottom: 36px;
+  margin: 0;
+  margin-bottom: 36px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 61px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 61px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-bottom: 80px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-bottom: 80px;
+  }
 }
 
 .features__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: map-get(v.$indents, medium);
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: map-get(v.$indents, medium);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        grid-template-columns: 1fr 1fr;
-        gap: 50px map-get(v.$indents, medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px map-get(v.$indents, medium);
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 50px map-get(v.$indents, medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px map-get(v.$indents, medium);
+  }
 }
 
 .features__item {
-    position: relative;
-    padding-top: 68px;
+  position: relative;
+  padding-top: 68px;
+  text-align: center;
+
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    padding-top: 0;
+    padding-left: 72px;
+    text-align: left;
+  }
+
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    padding-top: 76px;
+    padding-left: 0;
     text-align: center;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 26px);
+    display: block;
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    content: "";
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
-        padding-top: 0;
-        padding-left: 72px;
-        text-align: left;
+      left: 0;
     }
 
     @media (min-width: map-get(v.$breakpoints, large)) {
-        padding-top: 76px;
-        padding-left: 0;
-        text-align: center;
+      left: calc(50% - 26px);
     }
+  }
 
-    &::before {
-        position: absolute;
-        top: 0;
-        left: calc(50% - 26px);
-        display: block;
-        width: 52px;
-        height: 56px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        content: "";
+  &--quick::before {
+    background-image: url("./../../img/icons/stack.svg#features_quick");
+  }
 
-        @media (min-width: map-get(v.$breakpoints, medium)) {
-            left: 0;
-        }
+  &--easy::before {
+    background-image: url("./../../img/icons/stack.svg#features_easy");
+  }
 
-        @media (min-width: map-get(v.$breakpoints, large)) {
-            left: calc(50% - 26px);
-        }
-    }
+  &--power::before {
+    background-image: url("./../../img/icons/stack.svg#features_power");
+  }
 
-    &--quick::before {
-        background-image: url("./../../img/icons/stack.svg#features_quick");
-    }
-
-    &--easy::before {
-        background-image: url("./../../img/icons/stack.svg#features_easy");
-    }
-
-    &--power::before {
-        background-image: url("./../../img/icons/stack.svg#features_power");
-    }
-
-    &--eco::before {
-        background-image: url("./../../img/icons/stack.svg#features_eco");
-    }
+  &--eco::before {
+    background-image: url("./../../img/icons/stack.svg#features_eco");
+  }
 }
 
 .features__name {
-    margin: 0;
-    margin-bottom: 4px;
-    margin-top: -1px;
-    font-size: map-get(v.$font-size, h3-small);
-    line-height: map-get(v.$line-height, h3-small);
-    font-weight: 700;
+  margin: 0;
+  margin-bottom: 4px;
+  margin-top: -1px;
+  font-size: map-get(v.$font-size, h3-small);
+  line-height: map-get(v.$line-height, h3-small);
+  font-weight: 700;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 10px;
-        font-size: map-get(v.$font-size, h3-medium);
-        line-height: map-get(v.$line-height, h3-medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 10px;
+    font-size: map-get(v.$font-size, h3-medium);
+    line-height: map-get(v.$line-height, h3-medium);
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        font-size: map-get(v.$font-size, h3-large);
-        line-height: map-get(v.$line-height, h3-large);
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    font-size: map-get(v.$font-size, h3-large);
+    line-height: map-get(v.$line-height, h3-large);
+  }
 }
 
 .features__text {
-    margin: 0;
+  margin: 0;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        font-size: map-get(v.$font-size, medium);
-        line-height: map-get(v.$line-height, medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    font-size: map-get(v.$font-size, medium);
+    line-height: map-get(v.$line-height, medium);
+  }
 }

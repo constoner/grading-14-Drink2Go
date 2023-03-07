@@ -2,14 +2,14 @@
 @use "./../global/colors" as c;
 
 .tag {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 4px;
-    font-size: map-get(v.$font-size, small);
-    font-weight: 700;
-    line-height: map-get(v.$line-height, small);
-    color: c.$base-primary;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: map-get(v.$font-size, small);
+  font-weight: 700;
+  line-height: map-get(v.$line-height, small);
+  color: c.$base-primary;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }

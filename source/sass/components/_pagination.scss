@@ -2,109 +2,106 @@
 @use "./../global/colors" as c;
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        justify-content: end;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    justify-content: end;
+  }
 }
 
 .pagination__list {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .pagination__item:not(:first-child) {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .pagination__text {
-    display: none;
+  display: none;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        display: block;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    display: block;
+  }
 }
 
 .pagination__button {
-    display: block;
-    position: relative;
-    min-width: 40px;
-    height: 40px;
-    font-size: map-get(v.$font-size, medium);
-    line-height: map-get(v.$line-height, medium);
-    color: c.$base-primary;
-    background-color: c.$base-white;
+  display: block;
+  position: relative;
+  min-width: 40px;
+  height: 40px;
+  font-size: map-get(v.$font-size, medium);
+  line-height: map-get(v.$line-height, medium);
+  color: c.$base-primary;
+  background-color: c.$base-white;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-
-        &:hover,
-        &:focus {
-            color: c.$base-white;
-            background-color: c.$primary-lighter;
-        }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover,
+    &:focus {
+      color: c.$base-white;
+      background-color: c.$primary-lighter;
     }
+  }
 
-    &:active {
-        color: c.$base-white;
-        background-color: c.$primary-darker;
-    }
+  &:active {
+    color: c.$base-white;
+    background-color: c.$primary-darker;
+  }
 }
 
 .pagination__button--number {
+  &[aria-current="page"] {
+    font-weight: 600;
+    color: c.$base-black;
+    background-color: transparent;
+    cursor: default;
+  }
 
-
-    &[aria-current="page"] {
-        font-weight: 600;
-        color: c.$base-black;
-        background-color: transparent;
-        cursor: default;
-    }
-
-    &:disabled {
-        color: c.$base-white;
-        background-color: c.$light-grey;
-        cursor: default;
-    }
+  &:disabled {
+    color: c.$base-white;
+    background-color: c.$light-grey;
+    cursor: default;
+  }
 }
 
 .pagination__button--backward,
 .pagination__button--forward {
-    width: 40px;
+  width: 40px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        position: static;
-        width: auto;
-        padding: 8px 20px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    position: static;
+    width: auto;
+    padding: 8px 20px;
+  }
 
-    &:disabled {
-        color: c.$base-white;
-        background-color: c.$light-grey;
-        cursor: default;
-    }
+  &:disabled {
+    color: c.$base-white;
+    background-color: c.$light-grey;
+    cursor: default;
+  }
 }
 
 .pagination__button--backward {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .pagination__button--forward {
-    margin-left: 20px;
-    transform: rotate(180deg);
+  margin-left: 20px;
+  transform: rotate(180deg);
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        transform: rotate(0deg);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    transform: rotate(0deg);
+  }
 }
 
 .pagination__icon {
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        display: none;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    display: none;
+  }
 }

@@ -2,64 +2,63 @@
 @use "./../global/colors" as c;
 
 .user-navigation__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .user-navigation__item {
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    flex-shrink: 0;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        flex-shrink: 0;
-
-        &:not(:first-child) {
-            margin-left: map-get(v.$indents, small);
-        }
+    &:not(:first-child) {
+      margin-left: map-get(v.$indents, small);
     }
+  }
 }
 
 .user-navigation__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 60px;
-    transition: color 0.2s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  transition: color 0.2s ease-out;
 
-    &:active {
-        background-color: c.$base-secondary;
+  &:active {
+    background-color: c.$base-secondary;
+  }
+
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    height: 80px;
+  }
+
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    width: auto;
+    padding: 0 map-get(v.$indents, small);
+
+    &:hover,
+    &:focus {
+      color: c.$base-primary;
     }
-
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        height: 80px;
-    }
-
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        width: auto;
-        padding: 0 map-get(v.$indents, small);
-
-        &:hover,
-        &:focus {
-            color: c.$base-primary
-        }
-    }
+  }
 }
 
 .user-navigation__icon {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .user-navigation__text {
-    display: none;
+  display: none;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        display: inline;
-        margin-left: 10px;
-        font-size: map-get(v.$font-size, small);
-        line-height: map-get(v.$line-height, small);
-        font-weight: 500;
-        text-transform: uppercase;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    display: inline;
+    margin-left: 10px;
+    font-size: map-get(v.$font-size, small);
+    line-height: map-get(v.$line-height, small);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }

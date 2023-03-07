@@ -2,106 +2,103 @@
 @use "./../global/colors" as c;
 
 .product-card {
-    position: relative;
-    z-index: 0;
-    padding: map-get(v.$indents, small);
-    padding-top: 40px;
-    background-color: c.$base-white;
+  position: relative;
+  z-index: 0;
+  padding: map-get(v.$indents, small);
+  padding-top: 40px;
+  background-color: c.$base-white;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px transparent;
+  transition: box-shadow 0.2s ease-out;
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 4px;
-    box-shadow: 0px 5px 15px transparent;
-    transition: box-shadow 0.2s ease-out;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    content: "";
+  }
 
-    &::before {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 4px;
-        opacity: 0;
-        transition: opacity 0.2s ease-out;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-        content: "";
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    padding: map-get(v.$indents, medium);
+    padding-top: 50px;
+  }
+
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
     }
-
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        padding: map-get(v.$indents, medium);
-        padding-top: 50px;
-    }
-
-
-    @media (min-width: map-get(v.$breakpoints, large)) {
-
-        &:hover::before,
-        &:focus::before {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 .product-card__image {
-    display: block;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: contain;
-    margin: 0 auto;
-    transition: opacity 0.2s ease-out;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: opacity 0.2s ease-out;
 }
 
 .product-card__link {
-    display: block;
+  display: block;
 }
 
 .product-card__title {
-    margin: 0;
-    margin-top: 24px;
-    margin-bottom: 4px;
-    font-size: map-get(v.$font-size, h3-small);
-    line-height: map-get(v.$line-height, h3-small);
-    font-weight: 700;
-    transition: color 0.2s ease-out;
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 4px;
+  font-size: map-get(v.$font-size, h3-small);
+  line-height: map-get(v.$line-height, h3-small);
+  font-weight: 700;
+  transition: color 0.2s ease-out;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-top: 30px;
-        margin-bottom: 10px;
-        font-size: map-get(v.$font-size, h3-medium);
-        line-height: map-get(v.$line-height, h3-medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: map-get(v.$font-size, h3-medium);
+    line-height: map-get(v.$line-height, h3-medium);
+  }
 }
 
 @media (min-width: map-get(v.$breakpoints, large)) {
-
-    .product-card__link:hover .product-card__title {
-        color: c.$base-primary;
-    }
+  .product-card__link:hover .product-card__title {
+    color: c.$base-primary;
+  }
 }
 
 .product-card__description {
-    margin: 0;
-    margin-bottom: 16px;
+  margin: 0;
+  margin-bottom: 16px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 20px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 20px;
+  }
 }
 
 .product-card__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: -2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -2px;
 }
 
 .product-card__price {
-    font-size: map-get(v.$font-size, large);
-    line-height: map-get(v.$line-height, large);
-    font-weight: 600;
+  font-size: map-get(v.$font-size, large);
+  line-height: map-get(v.$line-height, large);
+  font-weight: 600;
 }
 
 .product-card__button {
-    min-width: 141px;
-    min-height: 36px;
-    text-align: center;
+  min-width: 141px;
+  min-height: 36px;
+  text-align: center;
 }

@@ -2,26 +2,26 @@
 @use "./../global/colors" as c;
 
 .map {
-    position: relative;
-    height: 420px;
+  position: relative;
+  height: 420px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        height: 480px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    height: 480px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        height: 540px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    height: 540px;
+  }
 }
 
 .map__image {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .map__container {
-    position: relative;
-    left: 0;
-    top: -100%;
-    z-index: 0;
-    height: 100%;
+  position: relative;
+  left: 0;
+  top: -100%;
+  z-index: 0;
+  height: 100%;
 }

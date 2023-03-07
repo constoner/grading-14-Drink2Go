@@ -2,33 +2,32 @@
 @use "./../global/colors" as c;
 
 .footer-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .footer-list__item {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .footer-list__link {
-    padding: 8px 0;
-    font-weight: 500;
-    font-size: map-get(v.$font-size, small);
-    line-height: map-get(v.$line-height, small);
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    transition: color 0.2s ease-out;
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: map-get(v.$font-size, small);
+  line-height: map-get(v.$line-height, small);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease-out;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-
-        &:hover,
-        &:focus {
-            color: c.$primary-lighter;
-        }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover,
+    &:focus {
+      color: c.$primary-lighter;
     }
+  }
 
-    &:active {
-        color: c.$primary-darker;
-    }
+  &:active {
+    color: c.$primary-darker;
+  }
 }

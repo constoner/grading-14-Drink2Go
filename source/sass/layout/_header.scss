@@ -2,70 +2,70 @@
 @use "./../global/colors" as c;
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: map-get(v.$layers, header);
-    display: flex;
-    align-items: center;
-    min-height: 60px;
-    margin-bottom: -1px;
+  position: sticky;
+  top: 0;
+  z-index: map-get(v.$layers, header);
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  margin-bottom: -1px;
+  padding: 0 map-get(v.$indents, small);
+  background-color: c.$base-white;
+  border-bottom: 1px solid c.$base-secondary;
+
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    min-height: 80px;
     padding: 0 map-get(v.$indents, small);
-    background-color: c.$base-white;
-    border-bottom: 1px solid c.$base-secondary;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        min-height: 80px;
-        padding: 0 map-get(v.$indents, small);
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    position: static;
+    padding: 0 map-get(v.$indents, large);
+    border-bottom: none;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        position: static;
-        padding: 0 map-get(v.$indents, large);
-        border-bottom: none;
-    }
-
-    &--nojs {
-        position: static;
-        flex-wrap: wrap;
-    }
+  &--nojs {
+    position: static;
+    flex-wrap: wrap;
+  }
 }
 
 .header__link {
-    flex-shrink: 0;
-    margin-right: auto;
+  flex-shrink: 0;
+  margin-right: auto;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin: 0;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin: 0;
+  }
 }
 
 .header__button {
-    margin-right: -20px;
+  margin-right: -20px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        display: none;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    display: none;
+  }
 
-    &--nojs {
-        display: none;
-    }
+  &--nojs {
+    display: none;
+  }
 }
 
 .header__menu-site {
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin: 0 auto;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin: 0 auto;
+  }
 }
 
 .header__menu-user {
-    margin-left: auto;
+  margin-left: auto;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        order: 1;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    order: 1;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        flex-shrink: 0;
-        margin: 0;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    flex-shrink: 0;
+    margin: 0;
+  }
 }

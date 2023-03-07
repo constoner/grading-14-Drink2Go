@@ -2,81 +2,80 @@
 @use "./../global/colors" as c;
 
 .custom-radio__button {
-    position: relative;
-    display: block;
-    width: 24px;
-    height: 24px;
-    border: 2px solid c.$base-grey;
-    border-radius: 50%;
-    transition: all 0.2s ease-out;
-    cursor: pointer;
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid c.$base-grey;
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
 
-    &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        width: 16px;
-        height: 16px;
-        background-color: c.$base-primary;
-        border-radius: 50%;
-        opacity: 0;
-        transform: scale(0) translate(-50%, -50%);
-        transform-origin: 0 0;
-        transition: all 0.2s ease-out;
-        content: "";
-    }
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: c.$base-primary;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0) translate(-50%, -50%);
+    transform-origin: 0 0;
+    transition: all 0.2s ease-out;
+    content: "";
+  }
 }
 
 // стили для ховера и фокуса
 @media (min-width: map-get(v.$breakpoints, large)) {
+  .custom-radio__input:hover + .custom-radio__button,
+  .custom-radio__input:focus-visible + .custom-radio__button {
+    border-color: c.$primary-lighter;
+  }
 
-    .custom-radio__input:hover+.custom-radio__button,
-    .custom-radio__input:focus-visible+.custom-radio__button {
-        border-color: c.$primary-lighter;
-    }
-
-    .custom-radio__input:hover+.custom-radio__button::after,
-    .custom-radio__input:focus-visible+.custom-radio__button::after {
-        background-color: c.$primary-opacity;
-        opacity: 1;
-        transform: scale(1) translate(-50%, -50%);
-        transform-origin: 0, 0;
-        transition-delay: 0.1s;
-    }
-}
-
-// стили для выбранной кнопки
-.custom-radio__input:checked+.custom-radio__button {
-    border-color: c.$base-primary;
-}
-
-.custom-radio__input:checked+.custom-radio__button::after {
-    background-color: c.$base-primary;
+  .custom-radio__input:hover + .custom-radio__button::after,
+  .custom-radio__input:focus-visible + .custom-radio__button::after {
+    background-color: c.$primary-opacity;
     opacity: 1;
     transform: scale(1) translate(-50%, -50%);
     transform-origin: 0, 0;
     transition-delay: 0.1s;
+  }
+}
+
+// стили для выбранной кнопки
+.custom-radio__input:checked + .custom-radio__button {
+  border-color: c.$base-primary;
+}
+
+.custom-radio__input:checked + .custom-radio__button::after {
+  background-color: c.$base-primary;
+  opacity: 1;
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0, 0;
+  transition-delay: 0.1s;
 }
 
 .custom-radio__label {
-    padding-left: 10px;
-    font-size: map-get(v.$font-size, medium);
-    line-height: map-get(v.$line-height, medium);
-    cursor: pointer;
+  padding-left: 10px;
+  font-size: map-get(v.$font-size, medium);
+  line-height: map-get(v.$line-height, medium);
+  cursor: pointer;
 }
 
 // стили для отключенной кнопки
-.custom-radio__input:disabled+.custom-radio__button {
-    border: 2px solid c.$light-grey;
-    cursor: default;
+.custom-radio__input:disabled + .custom-radio__button {
+  border: 2px solid c.$light-grey;
+  cursor: default;
 }
 
-.custom-radio__input:disabled+.custom-radio__button::after {
-    background-color: c.$light-grey;
+.custom-radio__input:disabled + .custom-radio__button::after {
+  background-color: c.$light-grey;
 }
 
-.custom-radio__input:disabled+.custom-radio__button+.custom-radio__label {
-    color: c.$base-grey;
-    cursor: default;
+.custom-radio__input:disabled + .custom-radio__button + .custom-radio__label {
+  color: c.$base-grey;
+  cursor: default;
 }

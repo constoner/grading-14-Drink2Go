@@ -2,143 +2,142 @@
 @use "./../global/colors" as c;
 
 .slide {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content;
-    justify-items: center;
-    height: 100%;
-    padding: map-get(v.$indents, small);
-    background-color: c.$light-grey;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  justify-items: center;
+  height: 100%;
+  padding: map-get(v.$indents, small);
+  background-color: c.$light-grey;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        height: 640px;
-        padding: 59px 80px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    height: 640px;
+    padding: 59px 80px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        grid-template-columns: 1fr 1fr;
-        gap: map-get(v.$indents, medium);
-        justify-items: start;
-        align-items: center;
-        height: 714px;
-        padding: 30px 80px;
-        padding-bottom: 84px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    grid-template-columns: 1fr 1fr;
+    gap: map-get(v.$indents, medium);
+    justify-items: start;
+    align-items: center;
+    height: 714px;
+    padding: 30px 80px;
+    padding-bottom: 84px;
+  }
 }
 
 .slide--flat {
-    background-color: c.$flat-white;
+  background-color: c.$flat-white;
 }
 
 .slide--lavender {
-    background-color: c.$lavender-latte;
+  background-color: c.$lavender-latte;
 }
 
 .slide--espresso {
-    background-color: c.$espresso;
+  background-color: c.$espresso;
 }
 
 .slide__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        order: -1;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    order: -1;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        align-items: start;
-        order: 0;
-        margin-top: -8px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    align-items: start;
+    order: 0;
+    margin-top: -8px;
+  }
 }
 
-
 .slide__image {
-    margin-bottom: 9px;
-    object-fit: contain;
-    width: auto;
-    max-height: 100%;
+  margin-bottom: 9px;
+  object-fit: contain;
+  width: auto;
+  max-height: 100%;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        width: 476px;
-        height: 476px;
-        margin-bottom: 0;
-        margin-top: 20px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    width: 476px;
+    height: 476px;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        width: 600px;
-        height: 600px;
-        margin-top: 0;
-        margin-left: 25px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    width: 600px;
+    height: 600px;
+    margin-top: 0;
+    margin-left: 25px;
+  }
 }
 
 .slide__tag {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        text-align: left;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    text-align: left;
+  }
 }
 
 .slide__title {
-    width: fit-content;
-    margin: 0;
-    margin-bottom: 10px;
-    font-size: map-get(v.$font-size, h1-small);
-    line-height: map-get(v.$line-height, h1-small);
-    letter-spacing: 0.02em;
+  width: fit-content;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: map-get(v.$font-size, h1-small);
+  line-height: map-get(v.$line-height, h1-small);
+  letter-spacing: 0.02em;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 16px;
-        font-size: map-get(v.$font-size, h1-medium);
-        line-height: map-get(v.$line-height, h1-medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 16px;
+    font-size: map-get(v.$font-size, h1-medium);
+    line-height: map-get(v.$line-height, h1-medium);
+  }
 }
 
 .slide__text {
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        font-size: map-get(v.$font-size, large);
-        line-height: map-get(v.$line-height, large);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    font-size: map-get(v.$font-size, large);
+    line-height: map-get(v.$line-height, large);
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-bottom: 40px;
-        text-align: left;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-bottom: 40px;
+    text-align: left;
+  }
 }
 
 .slide__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide__old-price {
-    margin-right: 7px;
-    font-size: map-get(v.$font-size, medium);
-    line-height: map-get(v.$line-height, large);
-    color: c.$base-primary;
-    text-decoration: line-through;
+  margin-right: 7px;
+  font-size: map-get(v.$font-size, medium);
+  line-height: map-get(v.$line-height, large);
+  color: c.$base-primary;
+  text-decoration: line-through;
 }
 
 .slide__price {
-    margin-right: map-get(v.$indents, small);
-    font-size: map-get(v.$font-size, large);
-    line-height: map-get(v.$line-height, large);
-    font-weight: 600;
+  margin-right: map-get(v.$indents, small);
+  font-size: map-get(v.$font-size, large);
+  line-height: map-get(v.$line-height, large);
+  font-weight: 600;
 }
 
 .slide__button {
-    min-width: 113px;
-    min-height: 40px;
-    font-size: map-get(v.$font-size, medium);
-    line-height: map-get(v.$line-height, medium);
+  min-width: 113px;
+  min-height: 40px;
+  font-size: map-get(v.$font-size, medium);
+  line-height: map-get(v.$line-height, medium);
 }

@@ -2,113 +2,110 @@
 @use "./../global/colors" as c;
 
 .slider {
-    height: 2px;
-    padding: 0 13px;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
+  height: 2px;
+  padding: 0 13px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 
-    &:disabled {
-        cursor: default;
-    }
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .slider__base {
-    height: 2px;
-    background-color: c.$light-grey;
+  height: 2px;
+  background-color: c.$light-grey;
 }
 
 .slider__connects {
-    height: 4px;
-    top: -1px;
+  height: 4px;
+  top: -1px;
 }
 
 .slider__connect {
-    background-color: c.$primary-lighter;
+  background-color: c.$primary-lighter;
 }
 
 .slider .slider__touch-area {
-    position: absolute;
-    right: -7px;
-    top: -7px;
-    width: 34px;
-    height: 34px;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  width: 34px;
+  height: 34px;
 }
 
 .slider .slider__handle {
-    right: -12px;
-    top: -10px;
-    width: 24px;
-    height: 24px;
-    background-color: c.$base-white;
-    border: 2px solid c.$primary-lighter;
+  right: -12px;
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  background-color: c.$base-white;
+  border: 2px solid c.$primary-lighter;
+  border-radius: 50%;
+  box-shadow: none;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
     border-radius: 50%;
-    box-shadow: none;
     transition: all 0.2s ease-out;
-    cursor: pointer;
+    content: "";
+  }
 
-    &::after {
-        display: none;
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover::before,
+    &:focus::before {
+      background-color: c.$primary-opacity;
     }
 
-    &::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: block;
-        width: 16px;
-        height: 16px;
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-        border-radius: 50%;
-        transition: all 0.2s ease-out;
-        content: "";
+    &:focus {
+      outline: 2px solid c.$base-primary;
     }
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
+  &:active {
+    border-color: c.$base-primary;
+  }
 
-        &:hover::before,
-        &:focus::before {
-            background-color: c.$primary-opacity;
-        }
+  &:active::before {
+    background-color: c.$base-primary;
+  }
 
-        &:focus {
-            outline: 2px solid c.$base-primary;
-        }
-    }
-
-    &:active {
-        border-color: c.$base-primary;
-    }
-
-    &:active::before {
-        background-color: c.$base-primary;
-    }
-
-    &:focus-visible {
-        outline: 2px solid c.$base-primary;
-    }
+  &:focus-visible {
+    outline: 2px solid c.$base-primary;
+  }
 }
-
 
 // стили для отключенного слайдера
 .slider[disabled] {
-    cursor: default;
-
+  cursor: default;
 }
 
 .slider[disabled] .slider__connect {
-    background-color: c.$light-grey;
+  background-color: c.$light-grey;
 }
 
 .slider[disabled] .slider__handle {
-    background-color: c.$lightest-grey;
-    border-color: c.$light-grey;
-    cursor: default;
+  background-color: c.$lightest-grey;
+  border-color: c.$light-grey;
+  cursor: default;
 
-    &:hover::before,
-    &:focus::before,
-    &:active::before {
-        display: none;
-    }
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    display: none;
+  }
 }

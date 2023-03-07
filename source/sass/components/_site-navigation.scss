@@ -2,110 +2,108 @@
 @use "./../global/colors" as c;
 
 .site-navigation__list {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    background-color: c.$base-white;
-    transform-origin: top center;
-    transform: scaleY(0);
-    will-change: transform;
-    transition: all 0.2s ease-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: c.$base-white;
+  transform-origin: top center;
+  transform: scaleY(0);
+  will-change: transform;
+  transition: all 0.2s ease-out;
+
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 7px;
+    transform: scale(1);
+  }
+
+  &--nojs {
+    position: static;
+    width: calc(100vw - 40px);
+    transform: scaleY(1);
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
-        position: static;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 7px;
-        transform: scale(1);
+      width: fit-content;
     }
+  }
 
-    &--nojs {
-        position: static;
-        width: calc(100vw - 40px);
-        transform: scaleY(1);
+  &--opened {
+    transform: scaleY(1);
+  }
 
-        @media (min-width: map-get(v.$breakpoints, medium)) {
-            width: fit-content;
-        }
-
-    }
-
-    &--opened {
-        transform: scaleY(1);
-    }
-
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-left: -52px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-left: -52px;
+  }
 }
 
 .site-navigation__item {
-    @media (max-width: map-get(v.$breakpoints, medium)) {
-        border-bottom: 1px solid c.$base-secondary;
+  @media (max-width: map-get(v.$breakpoints, medium)) {
+    border-bottom: 1px solid c.$base-secondary;
 
-        &:first-child {
-            border-top: 1px solid c.$base-secondary;
-        }
+    &:first-child {
+      border-top: 1px solid c.$base-secondary;
     }
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:not(:first-child) {
+      margin-left: 20px;
     }
+  }
 }
 
 .site-navigation__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    font-size: map-get(v.$font-size, small);
-    line-height: map-get(v.$line-height, small);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    text-align: center;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  font-size: map-get(v.$font-size, small);
+  line-height: map-get(v.$line-height, small);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
 
-    &:active {
-        background-color: c.$base-secondary;
-
-        @media (min-width: map-get(v.$breakpoints, medium)) {
-            color: c.$base-primary;
-        }
-    }
+  &:active {
+    background-color: c.$base-secondary;
 
     @media (min-width: map-get(v.$breakpoints, medium)) {
-        position: relative;
-        height: 80px;
-        letter-spacing: 0.02em;
-        transition: color 0.2s ease-out;
+      color: c.$base-primary;
+    }
+  }
 
-        &[aria-current="page"] {
-            color: c.$base-primary;
-        }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    position: relative;
+    height: 80px;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease-out;
 
-        &[aria-current="page"]::after {
-            position: absolute;
-            bottom: 0;
-            display: block;
-            width: 100%;
-            height: 2px;
-            background-color: c.$base-primary;
-            content: "";
-        }
+    &[aria-current="page"] {
+      color: c.$base-primary;
     }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-
-        &:hover,
-        &:focus {
-            color: c.$base-primary;
-        }
+    &[aria-current="page"]::after {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: c.$base-primary;
+      content: "";
     }
+  }
+
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover,
+    &:focus {
+      color: c.$base-primary;
+    }
+  }
 }

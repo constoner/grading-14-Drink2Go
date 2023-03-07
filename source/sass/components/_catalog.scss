@@ -2,99 +2,98 @@
 @use "./../global/colors" as c;
 
 .catalog {
-    padding: 50px map-get(v.$indents, small) 44px;
-    background-color: c.$lightest-grey;
+  padding: 50px map-get(v.$indents, small) 44px;
+  background-color: c.$lightest-grey;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        padding: 81px map-get(v.$indents, small) 90px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    padding: 81px map-get(v.$indents, small) 90px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        padding: 101px map-get(v.$indents, large) 120px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    padding: 101px map-get(v.$indents, large) 120px;
+  }
 }
 
 .catalog__wrapper {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        flex-direction: row;
-        justify-content: end;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    flex-direction: row;
+    justify-content: end;
+  }
 }
 
 .catalog__products-wrapper {
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        flex-shrink: 0;
-        margin-left: 30px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    flex-shrink: 0;
+    margin-left: 30px;
+  }
 }
 
 .catalog__form {
-    margin-bottom: 36px;
+  margin-bottom: 36px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 40px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 40px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        flex-grow: 1;
-        margin-bottom: 40px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    flex-grow: 1;
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__title {
-    margin: 0;
-    margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 20px;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-bottom: 40px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__select {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-bottom: 26px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-bottom: 26px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-top: -4px;
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-top: -4px;
+  }
 }
 
 .catalog__list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: map-get(v.$indents, small);
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: map-get(v.$indents, small);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: map-get(v.$indents, medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: map-get(v.$indents, medium);
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        width: 1011px;
-        grid-template-columns: repeat(3, 1fr);
-        gap: map-get(v.$indents, medium);
-    }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    width: 1011px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: map-get(v.$indents, medium);
+  }
 }
 
 .catalog__pagination {
-    margin: 0 auto;
-    margin-top: 40px;
+  margin: 0 auto;
+  margin-top: 40px;
 
-    @media (min-width: map-get(v.$breakpoints, medium)) {
-        margin-top: 70px;
-    }
+  @media (min-width: map-get(v.$breakpoints, medium)) {
+    margin-top: 70px;
+  }
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-        margin-top: 60px;
-    }
-
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    margin-top: 60px;
+  }
 }

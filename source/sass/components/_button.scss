@@ -2,67 +2,65 @@
 @use "./../global/colors" as c;
 
 .button {
-    padding: 8px;
-    font-family: inherit;
-    font-weight: 400;
-    color: c.$base-white;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.2s ease-out;
-    cursor: pointer;
+  padding: 8px;
+  font-family: inherit;
+  font-weight: 400;
+  color: c.$base-white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
 }
 
 .button--main {
-    background-color: c.$base-primary;
+  background-color: c.$base-primary;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-
-        &:hover,
-        &:focus {
-            background-color: c.$primary-lighter;
-        }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover,
+    &:focus {
+      background-color: c.$primary-lighter;
     }
+  }
 
-    &:active {
-        background-color: c.$primary-darker;
-    }
+  &:active {
+    background-color: c.$primary-darker;
+  }
 
-    &:disabled {
-        background-color: c.$base-grey;
-        cursor: default;
-    }
+  &:disabled {
+    background-color: c.$base-grey;
+    cursor: default;
+  }
 }
 
 .button--add {
-    color: c.$base-primary;
-    background-color: c.$base-white;
+  color: c.$base-primary;
+  background-color: c.$base-white;
 
-    @media (min-width: map-get(v.$breakpoints, large)) {
-
-        &:hover,
-        &:focus {
-            color: c.$base-white;
-            background-color: c.$primary-lighter;
-        }
+  @media (min-width: map-get(v.$breakpoints, large)) {
+    &:hover,
+    &:focus {
+      color: c.$base-white;
+      background-color: c.$primary-lighter;
     }
+  }
 
-    &:active {
-        color: c.$base-white;
-        background-color: c.$primary-darker;
-    }
+  &:active {
+    color: c.$base-white;
+    background-color: c.$primary-darker;
+  }
 
-    &:disabled {
-        color: c.$base-white;
-        background-color: c.$base-grey;
-        cursor: default;
-    }
+  &:disabled {
+    color: c.$base-white;
+    background-color: c.$base-grey;
+    cursor: default;
+  }
 }
 
 .button--icon {
-    padding-right: 20px;
-    padding-left: 46px;
-    background-image: url("./../../img/icons/stack.svg#cart-button");
-    background-repeat: no-repeat;
-    background-size: 20px 16px;
-    background-position: 20px center;
+  padding-right: 20px;
+  padding-left: 46px;
+  background-image: url("./../../img/icons/stack.svg#cart-button");
+  background-repeat: no-repeat;
+  background-size: 20px 16px;
+  background-position: 20px center;
 }
